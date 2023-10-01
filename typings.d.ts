@@ -9,29 +9,30 @@ type Base = {
     _updatedAt: string;
 }
 
-interface Post extends Base{
-    title: string;
-    categories: Category[];
-    backgroundImage: Image;
-    mainImage: Image;
-    image: Image;
-    public_id: string;
-    resource_type: string
-    type: string;
-    videoinput: string;
-    format: string;
-    version: number;
-    videoinput: File;
-    url: string;
-    youtube: PortableTextBlock[]
-    mobileImage: Image;
-    slug: Slug;
-    body: PortableTextBlock[];
-    content: PortableTextBlock[];
-    description: PortableTextBlock[]
-    overview?: PortableTextBlock[]
-    tags: string[]
-    }
+interface Post extends Base {
+  title: string;
+  categories: Category[];
+  backgroundImage: Image;
+  mainImage: Image;
+  mainImageProject: Image;
+  image: Image;
+  public_id: string;
+  resource_type: string;
+  type: string;
+  videoinput: string;
+  format: string;
+  version: number;
+  videoinput: File;
+  url: string;
+  youtube: PortableTextBlock[];
+  mobileImage: Image;
+  slug: Slug;
+  body: PortableTextBlock[];
+  content: PortableTextBlock[];
+  description: PortableTextBlock[];
+  overview?: PortableTextBlock[];
+  tags: string[];
+}
 
 interface Author extends Base{
     bio: Block[];
@@ -80,8 +81,9 @@ interface Span {
 interface Category extends Base {
 	role: string;
 	number: number;
-    description: string;
-    title: string;
+  description: string;
+  title: string;
+  sector: string;
 }
 
 interface videoinput {
@@ -93,6 +95,11 @@ interface videoinput {
 interface backgroundImage {
     _type: "image";
     asset: Reference;
+}
+
+interface mainImageProject {
+  _type: "image";
+  asset: Reference;
 }
 
 interface mainImage {

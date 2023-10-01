@@ -1,17 +1,36 @@
 {
+  "css.customData": [
+    ".vscode/tailwind.json"
+  ],
+
+  "css.lint.unknownAtRules": "ignore",
+    "[css]": {
+      "editor.defaultFormatter": "bradlc.vscode-tailwindcss"
+      },
+
     "cSpell.words": [
-        "bgimage",
-        "clientbrief",
-        "craigsteel",
-        "extralight",
-        "GROQ",
-        "heroicons",
-        "mobileimage",
-        "Parfitt",
-        "portabletext",
-        "tailwindcss",
-        "Toxen",
-        "Uturn",
-        "videofrontend"
+      "bgimage",
+      "CAIRNES",
+      "cardblue",
+      "checkmarks",
+      "clientbrief",
+      "colours",
+      "craigsteel",
+      "extralight",
+      "Finalise",
+      "GROQ",
+      "hamb",
+      "heroicons",
+      "INDESIGN",
+      "mobileimage",
+      "Parfitt",
+      "Photoshop",
+      "portabletext",
+      "tailwindcss",
+      "Toxen",
+      "Uturn",
+      "videofrontend",
+      "wireframe",
+      "wireframes"
     ]
 }

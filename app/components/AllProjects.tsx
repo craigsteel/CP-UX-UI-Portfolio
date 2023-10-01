@@ -16,7 +16,7 @@ function AllProjects({posts}:Props) {
 		    {posts.map(post => (
 
           <div key={post._id}
-            className='hover:scale-105 transition duration-500 ease-in-out bg-gradient-to-tr from-slate-800 from-30% via-blue-900 via-60% to-slate-800 opacity-70 hover:opacity-100 hover:drop-shadow-[0_0px_40px_rgba(0,0,205,0.4)] rounded-lg p-5'>
+            className='background-card'>
 
 				{post.categories?.map(category => (
           <>
@@ -40,9 +40,9 @@ function AllProjects({posts}:Props) {
             </div>
 
             <div className="pb-8">
-              <p className='text-[18px] leading-normal'>
+              <div className='text-[18px] leading-normal'>
                 {category.description}
-              </p>
+              </div>
               </div>
 
             <div className="relative flex rounded uppercase text-[12px] space-x-2 opacity-60 hover:opacity-100 transition duration-300 ease-in-out">

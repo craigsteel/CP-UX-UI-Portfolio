@@ -21,6 +21,11 @@ export default defineType({
       type: 'text',
     }),
     defineField({
+      name: 'sector',
+      title: 'Sector',
+      type: 'text',
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'text',

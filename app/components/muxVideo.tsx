@@ -3,7 +3,7 @@
 'use client'
 import 'styled-components';
 import MuxPlayer from '@mux/mux-player-react'
-import { client } from './../../sanity/lib/client'
+import { client } from '../../sanity/lib/client'
 import groq from "groq";
 import mux from 'mux-embed';
 import { NodeNextRequest } from 'next/dist/server/base-http/node';
