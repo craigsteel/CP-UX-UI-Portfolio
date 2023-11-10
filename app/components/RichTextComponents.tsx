@@ -72,9 +72,9 @@ export const RichTextComponents = {
       </blockquote>
 		),
     normal: ({ children }: any) =>
-      <p className="text-[18px]">
+      <div className="text-[18px]">
         {children}
-      </p>,
+      </div>
   },
 
 

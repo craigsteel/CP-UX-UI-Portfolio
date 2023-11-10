@@ -35,12 +35,12 @@ function AllProjects({posts}:Props) {
 								  className="relative m-auto  rounded-lg my-5" />
             </div>
 
-            <div className="text-[18px] uppercase font-semibold pb-2">
+            <div className="text-[14px] uppercase font-light pb-2">
               {category.role}
             </div>
 
             <div className="pb-8">
-              <div className='text-[18px] leading-normal'>
+              <div className='text-[14px] font-light leading-normal'>
                 {category.description}
               </div>
               </div>

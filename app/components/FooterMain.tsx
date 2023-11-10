@@ -16,17 +16,18 @@ export default function Footer() {
           Web Application Designed & built using:
      </div>
         <div className="text-[14px] font-extralight pb-2">
-       Pen & Paper - Adobe Photoshop, XD, MediaEncoder - Next.js 13 (Framework) - Sanity (Headless CMS), Videos and Images served from Mux - Deployed on Vercel.
+          Pen & Paper - Adobe Photoshop - Adobe XD - MediaEncoder <br />
+          Next.js 13 (Framework) - Sanity (Headless CMS) - Mux - Deployed via GitHub on Vercel.
     </div>
     <div>
-         To view a larger selection of projects including:
+         {/* To view a larger selection of projects including:
      </div>
 
         <div className="font-extralight text-[14px]">
       Branding, Packaging, Print and Web Applications Visit -
        <a className="opacity-80 hover:opacity-100 transition duration-300"
          href="https://craigsteel-design.com/"> www.craigsteel-design.com
-       </a>
+       </a> */}
      </div>
 
       <div className="flex flex-row space-x-5 py-5">

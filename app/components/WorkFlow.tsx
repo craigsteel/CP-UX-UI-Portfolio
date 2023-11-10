@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { InfinitySymbol } from './svgs'
 
 export default function Workflow() {
   return (
@@ -71,7 +72,7 @@ export default function Workflow() {
         </div>
 
         <Image
-          src="/infinity.svg"
+          src={InfinitySymbol}
           fill
           className="-z-10 absolute opacity-10 p-5 bg-no-repeat bg-center"
           loading='lazy'

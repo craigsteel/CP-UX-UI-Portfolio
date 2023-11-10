@@ -53,7 +53,7 @@ async function Project({ params: { slug } }: Props) {
 					alt={post.title}
 					fill={true}
 					quality={100}
-					className="w-screen opacity-30 blur-sm"
+					className="relative w-screen opacity-30 blur-sm"
 				/>
 			</div>
 
@@ -61,7 +61,7 @@ async function Project({ params: { slug } }: Props) {
 				<section className="mx-5 md:mx-10">
 					<div className="relative mx-5 md:mx-10 z-1">
             <header className="mt-[20px] md:w-2/3 md:ml-[80px]">
-							<h1 className="text-6xl text-white uppercase font-bold">
+							<h1 className="text-6xl text-white uppercase font-light">
 								{post.title}
               </h1>
 
