@@ -21,7 +21,8 @@ type Props = {
 export const revalidate = 60;
 
 export async function generateStaticParams() {
-	const query = groq`*[_type=='post']
+  const query = groq`
+  *[_type=='post']
 		{ slug }
 	`;
 
@@ -70,7 +71,7 @@ async function Project({ params: { slug } }: Props) {
               </div>
 						</header>
 
-						<div className="mt-5 drop-shadow-[0px_0px_90px_rgba(0,0,0,0.8)]">
+						<div className="mt-5">
 							<Image
 								src={urlFor(post.mainImageProject).url()}
 								alt={post.title}
@@ -81,7 +82,7 @@ async function Project({ params: { slug } }: Props) {
 							/>
 						</div>
 
-            <div className="z-30 drop-shadow-[0px_0px_90px_rgba(0,0,0,0.8)]">
+            <div className="z-30">
 							<PortableText value={post.body} components={RichTextComponents} />
             </div>
 

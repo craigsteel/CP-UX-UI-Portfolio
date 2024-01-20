@@ -6,10 +6,10 @@ import { client } from '@/sanity/lib/client';
 
 const query = groq`
 *[_type == "post"]{
-		...,
-		author->,
-		categories[]->,
-		body[],
+  ...,
+  categories[]->,
+  body[],
+  "playbackId": video.asset->playbackId,
   } | order(_createdAt desc)`;
 
 export default async function Page() {

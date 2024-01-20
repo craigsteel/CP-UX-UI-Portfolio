@@ -2,13 +2,13 @@
  * This configuration is used to for the Sanity Studio that’s mounted on the `/app/studio/[[...index]]/page.tsx` route
  */
 
-import {visionTool} from '@sanity/vision'
-import {StudioNavbar, defineConfig} from 'sanity'
+import { visionTool } from '@sanity/vision'
+import { StudioNavbar, defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
-import {muxInput} from 'sanity-plugin-mux-input'
+import { muxInput } from 'sanity-plugin-mux-input'
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import {apiVersion, dataset, projectId, muxToxenID, muxTokenSecret, } from './sanity/env'
+import {apiVersion, dataset, projectId, muxTokenID, muxTokenSecret} from './sanity/env'
 import {schemaTypes} from './sanity/schema'
 import { myTheme } from './theme'
 import Logo from './app/components/Logo'
@@ -16,9 +16,9 @@ import Logo from './app/components/Logo'
 export default defineConfig({
   basePath: '/studio',
   projectId,
-  muxToxenID,
-  muxTokenSecret,
   dataset,
+  muxTokenID,
+  muxTokenSecret,
   // Add and edit the content schema in the './sanity/schema' folder
   schema: {
       types: schemaTypes,

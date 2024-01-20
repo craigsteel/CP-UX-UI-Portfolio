@@ -1,6 +1,5 @@
 
 import Image from 'next/image';
-
 import { urlFor } from './../../sanity/lib/image'
 import { Post } from '../../typings';
 import ClientSideRoute from './ClientSideRoute';

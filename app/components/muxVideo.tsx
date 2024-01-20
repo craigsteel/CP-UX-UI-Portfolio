@@ -1,44 +1,40 @@
-/* eslint-disable @next/next/no-async-client-component */
-// eslint-disable-next-line @next/next/no-async-client-component
-'use client'
+
 import 'styled-components';
 import MuxPlayer from '@mux/mux-player-react'
-import { client } from '../../sanity/lib/client'
+import { client } from './../../sanity/lib/client'
 import groq from "groq";
-import mux from 'mux-embed';
 import { NodeNextRequest } from 'next/dist/server/base-http/node';
-// import { videofrontend } from '@/typings'
+import { Post } from '../../typings';
+import { useEffect } from 'react'
+import { suspend } from 'suspend-react'
 
-    type Props = {
-        params: {
-            videofrontend: string;
-            playbackId: string;
-        }
-    }
+type Props = {
+  posts: Post[];
+}
 
-     const query = groq`
-        *[_type == "videofrontend"][0]{
-            title,
-            "playbackId": video.asset->playbackId
-        }`;
+function Video({posts}:Props) {
 
+  return (
 
-export default async function Video() {
+    <div> {posts?.map((post) => (
+        <div key={post._id}
+        className='md:flex w-full md:w-2/3 rounded-lg pb-8'>
 
-    const videofrontend = await client.fetch(query);
-
-    return (
-
-        <MuxPlayer
-            playbackId={videofrontend.playbackId}
-            metadata={videofrontend.title}
+          <MuxPlayer
+            streamType="on-demand"
+            playbackId={post.playbackId}
+            metadata={{ video_title: post.title }}
             style={{ aspectRatio: 16 / 9, borderRadius: 0.5 }}
             loop
             muted
             autoPlay="muted"
-            >
-        </MuxPlayer>
+          >
+          </MuxPlayer>
 
-    )
+        </div>
+        ))}
+    </div>
+  )
 }
 
+export default Video

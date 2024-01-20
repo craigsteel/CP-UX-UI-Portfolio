@@ -40,16 +40,9 @@ export default defineType({
       type: "blockContent",
     }),
     defineField({
-      name: "videofrontend",
-      title: "Video For frontend",
-      type: "array",
-      of: [{ type: "reference", to: { type: "videofrontend" } }],
-    }),
-    defineField({
-      name: "videoinput",
-      type: "file",
-      title: "Banner Video",
-      description: "Video served from sanity",
+      title: "Video",
+      name: "video",
+      type: "mux.video",
     }),
     defineField({
       name: "mainImage",

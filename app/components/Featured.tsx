@@ -1,9 +1,10 @@
 
+'use client'
 import Image from 'next/image';
-
 import { urlFor } from './../../sanity/lib/image'
 import { Post } from '../../typings';
 import ClientSideRoute from './ClientSideRoute';
+import MuxPlayer from '@mux/mux-player-react';
 
 type Props = {
 	posts: Post[];
@@ -23,27 +24,24 @@ function Featured({posts}:Props) {
 							{category.number}
 						</h2> */}
 
-						<h2 className='text-3xl pb-4 font-extralight'>
+						<h2 className='text-3xl pt-4 font-extralight'>
 							{category.title}
-						</h2>
+            </h2>
+            <div className="text-[14px] font-extralight mb-8 line-clamp-5 leading-6">
+              {category.description}
+            </div>
             <div className='md:text-[14px] font-medium uppercase'>
-              Role:
+              Role
           </div>
 						<div className="text-[14px] font-light pb-4">
 							{category.role}
             </div>
             <div className='md:text-[14px] font-medium uppercase'>
-              Category:
+              Sector
             </div>
             <div className="text-[14px] font-light pb-4">
               {category.sector}
             </div>
-            <div className='md:text-[14px] font-medium uppercase'>
-              The Challenge:
-            </div>
-            <div className="text-[14px] font-extralight mb-8 line-clamp-5 leading-6">
-							{category.description}
-						</div>
 
             <div className='hidden md:flex absolute bottom-8 opacity-70 hover:opacity-100 bg-slate-950 p-2 rounded-sm transition duration-500 ease-in-out'>
 							<ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
@@ -66,14 +64,27 @@ function Featured({posts}:Props) {
 				</div>
 
         <div className='md:flex w-full md:w-2/3 rounded-lg pb-8'>
-          <Image
+
+          <MuxPlayer
+            streamType="on-demand"
+            playbackId={post.playbackId}
+            metadata={{ video_title: post.title }}
+            style={{ aspectRatio: 16 / 9, borderRadius: 0.5 }}
+            loop
+            muted
+            autoPlay="muted"
+          >
+          </MuxPlayer>
+
+          {/* <Image
 						src={urlFor(post.mainImage).url()}
 						alt={post.title}
 						width={902}
 						height={508}
 						quality={100}
 						className="object-cover rounded-lg drop-shadow-[0px_10px_10px_rgba(0,0,0,0.8)]"
-          />
+          /> */}
+
         </div>
 
         <div className='projectButton md:hidden'>

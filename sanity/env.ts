@@ -10,7 +10,7 @@ export const projectId = assertValue(
   process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   'Missing environment variable: NEXT_PUBLIC_SANITY_PROJECT_ID'
 )
-export const muxToxenID = process.env.MUX_TOKEN_ID
+export const muxTokenID = process.env.MUX_TOKEN_ID
 
 export const muxTokenSecret = process.env.MUX_TOKEN_SECRET
 
