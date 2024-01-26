@@ -13,7 +13,7 @@ export default function ToolsUsed() {
         </h2>
 
         <div className='p-10 font-light uppercase grid md:grid-cols-1 md:gap-6 lg:grid-cols-1 lg:gap-6'>
-          <h3>Photoshop  /  Illustrator  /  INDESIGN  /  Adobe-XD   /  InVision  /  VSC  /  GITHUB  /  Google</h3>
+          <h3>Photoshop  /  Illustrator  /  INDESIGN  /  Adobe-XD   /  Figma  /  InVision  /  VSC  /  GITHUB  /  Google</h3>
           <style jsx>{ `h3 { word-spacing: 1em; } `}</style>
         </div>
 

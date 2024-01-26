@@ -17,8 +17,8 @@ export default function Footer() {
     </div>
 
     <div className="text-[14px] font-extralight pb-2">
-      Pen & Paper - Adobe Photoshop - Adobe XD - MediaEncoder <br />
-      Next.js 13 (Framework) - Sanity (Headless CMS) - Mux - Deployed via GitHub on Vercel.
+      Pen & Paper - Adobe Photoshop, Illustrator - Adobe XD - MediaEncoder <br />
+      Next.js 14 (Framework) - Sanity (Headless CMS) - Mux (Video delivery) - Deployed (via GitHub on Vercel).
     </div>
 
     {/* <div>

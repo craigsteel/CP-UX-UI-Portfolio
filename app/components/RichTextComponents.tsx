@@ -72,7 +72,7 @@ export const RichTextComponents = {
       </blockquote>
 		),
     normal: ({ children }: any) =>
-      <div className="text-[18px]">
+      <div className="text-[18px] p-2">
         {children}
       </div>
   },
@@ -102,7 +102,7 @@ export const RichTextComponents = {
 				const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined;
 
       return (
-        <div className='flex my-2 mx-10 rounded-lg p-4 bg-indigo-950 opacity-70 hover:opacity-100 transition duration-300 ease-in-out '>
+        <div className='flex rounded-lg p-4 bg-indigo-950 opacity-70 hover:opacity-100 transition duration-300 ease-in-out '>
 					<a
 						href={value.href}
 						rel={rel}

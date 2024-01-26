@@ -86,20 +86,12 @@ async function Project({ params: { slug } }: Props) {
 							<PortableText value={post.body} components={RichTextComponents} />
             </div>
 
-            <a href={''}
-              title="View Live Site"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="projectButton my-5 left-[80px]">
-              View {post.title} Live Site
-            </a>
-
 					</div>
 				</section>
 
-				<div className='projectButton relative my-10'>
+        <div className='projectButton relative m-20'>
 					<ClientSideRoute key={post._id} route={`/projects/${post.slug.current}`}>
-						<div className='text-sm'>Back To All Projects</div>
+            <div className='text-[18px]'>Back To All Projects</div>
 					</ClientSideRoute>
 				</div>
 			</article>
