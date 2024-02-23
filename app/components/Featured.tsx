@@ -24,10 +24,16 @@ function Featured({posts}:Props) {
 							{category.number}
 						</h2> */}
 
-						<h2 className='text-3xl pt-4 font-extralight'>
+						<h2 className='text-3xl pt-4 pb-2 font-extralight'>
 							{category.title}
             </h2>
-            <div className="text-[14px] font-extralight mb-8 line-clamp-5 leading-6">
+            <div className='md:text-[14px] font-medium uppercase'>
+              Sector
+            </div>
+            <div className="text-[14px] font-light pb-4">
+              {category.sector}
+            </div>
+            <div className="text-[14px] font-extralight mb-8 line-clamp-6 leading-6">
               {category.description}
             </div>
             <div className='md:text-[14px] font-medium uppercase'>
@@ -35,12 +41,6 @@ function Featured({posts}:Props) {
           </div>
 						<div className="text-[14px] font-light pb-4">
 							{category.role}
-            </div>
-            <div className='md:text-[14px] font-medium uppercase'>
-              Sector
-            </div>
-            <div className="text-[14px] font-light pb-4">
-              {category.sector}
             </div>
 
             <div className='hidden md:flex absolute bottom-8 opacity-70 hover:opacity-100 bg-slate-950 p-2 rounded-sm transition duration-500 ease-in-out'>

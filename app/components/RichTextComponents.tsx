@@ -16,9 +16,7 @@ export const RichTextComponents = {
 					src={urlFor(value).url()}
 					alt={value.alt || " "}
           loading="lazy"
-          className={`mx-auto ${isInline ? "max-w-xs" : "max-w-full"
-        } rounded-lg shadow-lg`}
-          style={{ aspectRatio: width / height }}
+          className="w-full"
         />
 			);
 		},
@@ -58,11 +56,11 @@ export const RichTextComponents = {
       </h2>
 		),
 		h3: ({ children }: any) => (
-    <h3 className="text-1xl uppercase py-1">
+    <h3 className="text-2xl uppercase pt-4 mt-2">
         {children}</h3>
 		),
 		h4: ({ children }: any) => (
-			<h4 className="text-base py-1">
+      <h4 className="py-4 text-2xl font-extralight">
         {children}
       </h4>
 		),
@@ -72,7 +70,7 @@ export const RichTextComponents = {
       </blockquote>
 		),
     normal: ({ children }: any) =>
-      <div className="text-[18px] p-2">
+      <div className="text-[18px] p-2  font-light">
         {children}
       </div>
   },
@@ -102,7 +100,7 @@ export const RichTextComponents = {
 				const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined;
 
       return (
-        <div className='flex rounded-lg p-4 bg-indigo-950 opacity-70 hover:opacity-100 transition duration-300 ease-in-out '>
+        <div className='flex rounded-lg pb-2 bg-white-950 opacity-70 hover:opacity-100 transition duration-300 ease-in-out '>
 					<a
 						href={value.href}
 						rel={rel}
