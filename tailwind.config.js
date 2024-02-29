@@ -8,6 +8,9 @@ module.exports = {
 
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-open-sans)']
+      },
       dropShadow: {
         '1xl': '0_0px_70px_rgba(0, 0, 0, 1)',
       },
@@ -17,7 +20,6 @@ module.exports = {
           950: '#010b2c',
         },
       }
-
     },
   },
 

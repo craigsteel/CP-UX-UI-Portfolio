@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap');
-
 @layer base {
 
   html {
     margin-left: 0;
     margin-right: 0;
+    font-family: var(--font-open-sans);
   }
 
   * {
@@ -26,7 +25,8 @@
   body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: var(--font-open-sans);
     color: white;
   }
 
@@ -102,8 +102,10 @@
   }
 
   mux-player {
-      /* Target a specific section by prefixing the CSS var with (top|center|bottom) */
-      --center-controls: none;
-      --bottom-play-button: none;
-    }
+    /* Target a specific section by prefixing the CSS var with (top|center|bottom) */
+    /* --center-controls: none;
+    --bottom-play-button: none;
+    --media-control-bar: none; */
+    --controls: none;
+  }
 }

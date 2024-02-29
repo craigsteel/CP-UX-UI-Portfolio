@@ -27,16 +27,16 @@ function Featured({posts}:Props) {
 						<h2 className='text-3xl pt-4 pb-2 font-extralight'>
 							{category.title}
             </h2>
-            <div className='md:text-[14px] font-medium uppercase'>
+            <div className='md:text-[14px] font-light uppercase'>
               Sector
             </div>
             <div className="text-[14px] font-light pb-4">
               {category.sector}
             </div>
-            <div className="text-[14px] font-extralight mb-8 line-clamp-6 leading-6">
+            <div className="text-[14px] font-extralight mb-8 line-clamp-5 leading-6">
               {category.description}
             </div>
-            <div className='md:text-[14px] font-medium uppercase'>
+            <div className='md:text-[14px] font-light uppercase'>
               Role
           </div>
 						<div className="text-[14px] font-light pb-4">
@@ -69,14 +69,11 @@ function Featured({posts}:Props) {
             streamType="on-demand"
             playbackId={post.playbackId}
             metadata={{ video_title: post.title }}
-            style={
-              {
-                aspectRatio: 16 / 9,
-                borderRadius: 8
-              }}
+            style={{aspectRatio: 16 / 9 }}
             loop
             muted
             autoPlay="muted"
+            className="rounded-lg"
           >
           </MuxPlayer>
 
