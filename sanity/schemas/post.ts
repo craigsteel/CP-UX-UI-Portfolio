@@ -8,6 +8,11 @@ export default defineType({
   icon: DocumentIcon,
   fields: [
     defineField({
+      name: "number",
+      title: "Number",
+      type: "number",
+    }),
+    defineField({
       name: "title",
       title: "Title",
       type: "string",

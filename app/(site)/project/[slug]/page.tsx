@@ -61,7 +61,7 @@ async function Project({ params: { slug } }: Props) {
 			<article>
 				<section className="mx-5 md:mx-10">
 					<div className="relative mx-5 md:mx-10 z-1">
-            <header className="mt-[20px] md:w-2/3 md:ml-[80px]">
+            <header className="mt-[20px] md:ml-[80px]">
 							<h1 className="text-6xl text-white uppercase font-light">
 								{post.title}
               </h1>
@@ -78,7 +78,7 @@ async function Project({ params: { slug } }: Props) {
 								width={1150}
 								height={608}
 								quality={100}
-								className="rounded-lg md:w-full mx-auto"
+                className="rounded-t-lg md:w-full mx-auto"
 							/>
 						</div>
 

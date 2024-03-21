@@ -17,8 +17,8 @@ export default function Footer() {
     </div>
 
     <div className="text-[14px] font-extralight pb-2">
-      Pen & Paper - Adobe Photoshop, Illustrator - Adobe XD - MediaEncoder <br />
-      Next.js 14 (Framework) - Sanity (Headless CMS) - Mux (Video delivery) - Deployed (via GitHub on Vercel).
+      Pen & Paper, Adobe Creative Cloud (Photoshop, Illustrator, XD and MediaEncoder) <br />
+      Next.js (Framework) - Sanity (Headless CMS) - Mux (Video delivery) - Deployed (via GitHub on Vercel).
     </div>
 
     {/* <div>
@@ -47,7 +47,16 @@ export default function Footer() {
           rel="noopener noreferrer"
           style={{ height: 40, width: 40 }}
           className="opacity-60 hover:opacity-100 transition duration-300"
-        />
+          />
+
+          <SocialIcon
+            url="https://linkedin.com/in/craig-parfitt-14660a271"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ height: 40, width: 40 }}
+            className="opacity-60 hover:opacity-100 transition duration-300"
+          />
+
       </div>
 
       </div>

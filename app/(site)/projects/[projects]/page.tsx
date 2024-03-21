@@ -1,16 +1,16 @@
 import Hero from "@/app/components/Hero";
 import { groq } from "next-sanity";
 import AllProjects from "@/app/components/AllProjects";
+import { client } from '../../../../sanity/lib/client';
 
-
-import { client } from '../../../../sanity/lib/client'
-
-  const query = groq`
-*[_type == "post"]{
-  ...,
-  author->,
-  categories[]->,
-  } | order(_createdAt desc)`;
+const query = groq`
+  *[_type == "post"] | order(number, desc){
+    ...,
+    number,
+    publishedAt,
+    author->,
+    categories[]->,
+  }`;
 
 
 export default async function Projects() {

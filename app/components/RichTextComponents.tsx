@@ -46,35 +46,41 @@ export const RichTextComponents = {
   block: {
     // Ex. 1: customizing common block types
 		h1: ({ children }: any) => (
-			<h1 className="text-3xl py-5">
+      <h1 className="text-3xl py-5">
         {children}
       </h1>
 		),
 		h2: ({ children }: any) => (
-			<h2 className="text-1xl py-5">
+      <h2 className="text-1xl py-5">
         {children}
       </h2>
 		),
 		h3: ({ children }: any) => (
-    <h3 className="text-2xl uppercase pt-4 mt-2">
-        {children}</h3>
+      <h3 className="text-[30px] font-medium uppercase pt-6">
+        {children}
+      </h3>
 		),
 		h4: ({ children }: any) => (
-      <h4 className="py-4 text-2xl font-extralight">
+      <h4 className="text-2xl pt-1 mt-8 mb-2 font-extralight">
         {children}
       </h4>
-		),
+    ),
+    h5: ({ children }: any) => (
+      <h5 className="text-lg pt-1 mt-8 mb-2 font-extralight">
+        {children}
+      </h5>
+    ),
 		blockquote: ({ children }: any) => (
-      <blockquote className="p-4 mt-2 mb-4 rounded-lg border-l-4 border-[#F7AB0A] bg-gray-800/75 text-xl italic font-light leading-relaxed text-gray-300">
+      <blockquote className="p-4 mb-4 rounded-lg w-11/12 border-l-4 border-[#F7AB0A] bg-gray-800/75 text-xl italic font-light leading-relaxed text-gray-300">
         {children}
       </blockquote>
 		),
-    normal: ({ children }: any) =>
-      <div className="text-[18px] p-2  font-light">
+    normal: ({ children }: any) => (
+      <div className="text-[16px] mb-2 font-light md:w-2/3">
         {children}
       </div>
+    ),
   },
-
 
   list: {
     // Ex. 1: customizing common list types
@@ -83,7 +89,6 @@ export const RichTextComponents = {
         {children}
       </ul>
     ),
-
     number: ({ children }: any) => (
       <ol className="mt-lg">
         {children}
@@ -100,9 +105,10 @@ export const RichTextComponents = {
 				const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined;
 
       return (
-        <div className='flex rounded-lg pb-2 bg-white-950 opacity-70 hover:opacity-100 transition duration-300 ease-in-out '>
+        <div className='flex bg-white-950 opacity-70 hover:opacity-100 transition duration-300 ease-in-out '>
 					<a
-						href={value.href}
+            href={value.href}
+            target="_blank"
 						rel={rel}
             className="flex text-lg underline decoration-[#F7AB0A]">
 						{children}

@@ -20,27 +20,23 @@ function Featured({posts}:Props) {
 					<div key={category._id}
             className='flex w-full md:w-1/3 flex-col md:pr-10'>
 
-						{/* <h2 className='uppercase text-2xl pb-3 font-extralight'>
-							{category.number}
-						</h2> */}
-
 						<h2 className='text-3xl pt-4 pb-2 font-extralight'>
 							{category.title}
             </h2>
-            <div className='md:text-[14px] font-light uppercase'>
+            <div className="text-[14px] font-extralight mb-4 line-clamp-6 leading-6">
+              {category.description}
+            </div>
+            <div className='md:text-[14px] uppercase'>
+              Role
+            </div>
+            <div className="text-[14px] font-light pb-4">
+              {category.role}
+            </div>
+            <div className='md:text-[14px] uppercase'>
               Sector
             </div>
             <div className="text-[14px] font-light pb-4">
               {category.sector}
-            </div>
-            <div className="text-[14px] font-extralight mb-8 line-clamp-5 leading-6">
-              {category.description}
-            </div>
-            <div className='md:text-[14px] font-light uppercase'>
-              Role
-          </div>
-						<div className="text-[14px] font-light pb-4">
-							{category.role}
             </div>
 
             <div className='hidden md:flex absolute bottom-8 opacity-70 hover:opacity-100 bg-slate-950 p-2 rounded-sm transition duration-500 ease-in-out'>
@@ -63,18 +59,16 @@ function Featured({posts}:Props) {
 					</Image>
 				</div>
 
-        <div className='md:flex w-full md:w-2/3 rounded-lg pb-8'>
-
+        <div className='md:flex w-full md:w-2/3 pb-8 rounded-2xl drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]'>
           <MuxPlayer
             streamType="on-demand"
             playbackId={post.playbackId}
             metadata={{ video_title: post.title }}
-            style={{aspectRatio: 16 / 9 }}
+            // style={{ borderRadius: 16 / 9 }}
             loop
             muted
             autoPlay="muted"
-            className="rounded-lg"
-          >
+            className="rounded-lg aspect-video drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]">
           </MuxPlayer>
 
           {/* <Image

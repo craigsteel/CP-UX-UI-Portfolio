@@ -1,6 +1,5 @@
 import '../globals.css'
 import type { Metadata } from 'next'
-import NavbarMobile from '../components/NavbarMobile';
 import FooterMain from '../components/FooterMain';
 import dynamic from 'next/dynamic';
 import { Open_Sans } from 'next/font/google'

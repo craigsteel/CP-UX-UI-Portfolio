@@ -5,12 +5,14 @@ import { client } from '@/sanity/lib/client';
 
 
 const query = groq`
-*[_type == "post"]{
+*[_type == "post"] | order(number, desc)[0..4]{
   ...,
+  number,
+  publishedAt,
   categories[]->,
   body[],
   "playbackId": video.asset->playbackId,
-  } | order(_createdAt desc)`;
+  }`;
 
 export default async function Page() {
 

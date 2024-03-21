@@ -16,13 +16,13 @@ export default function Journey() {
         <h2 className="grid pl-5 md:pl-10 pt-5 uppercase font-light text-slate-950">
           MY JOURNEY
         </h2>
-        <div className='md:px-12 pt-5 pb-12 text-slate-950 grid md:grid-cols-3 md:gap-6 lg:grid-cols-3 lg:gap-6'>
+        <div className='md:px-12 pl-5 pt-5 pb-12 text-slate-950 grid md:grid-cols-3 md:gap-6 lg:grid-cols-3 lg:gap-6'>
 
           <div className=''>
             <h4>ECHO WEB SOLUTIONS</h4>
             <p className="font-medium text-[18px]">UI UX SENIOR DESIGNER - 2021-23</p>
             <p className="font-bold text-[14px]">SKILLS</p>
-            <ul>
+            <ul className="list-disc">
               { echo.map((echo, index) =>
                 (<li key={index} >{ echo }</li>))}
             </ul>
@@ -30,7 +30,8 @@ export default function Journey() {
           <div className=''>
             <h4>CRAIG STEEL DESIGN</h4>
             <p className="font-medium text-[18px] uppercase">Senior Designer - 2012-20</p>
-            <ul>
+            <p className="font-bold text-[14px]">SKILLS</p>
+            <ul className="list-disc">
               {csd.map((csd, index) =>
                 (<li key={index}>{csd}</li>)
               )}
@@ -39,7 +40,8 @@ export default function Journey() {
           <div className=''>
             <h4>THE FUSION EFFECT</h4>
             <p className="font-medium text-[18px] uppercase">Senior Designer - 2003-10</p>
-            <ul>
+            <p className="font-bold text-[14px]">SKILLS</p>
+            <ul className="list-disc">
               {effect.map((effect, index) =>
                 (<li key={index}>{effect}</li>)
               )}
