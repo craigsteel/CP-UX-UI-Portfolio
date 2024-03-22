@@ -11,7 +11,7 @@ type Props = {
 function AllProjects({posts}:Props) {
   return (
     <>
-      <div className="grid gap-20 md:grid-cols-2">
+      <div className="grid gap-6 md:gap-20 md:grid-cols-2">
 		    {posts.map(post => (
 
           <div key={post._id}

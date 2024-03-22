@@ -12,7 +12,7 @@ export default function Hero(props: HeroProps) {
 				{heading}
 			</h1>
 
-			<p className='font-light text-[18px] md:2xl md:mr-[165px] leading-[2.4rem]'>
+			<p className='font-light text-[18px] md:2xl md:mr-[165px] leading-[1.9rem]'>
 				{message}
 			</p>
 

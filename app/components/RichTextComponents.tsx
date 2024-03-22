@@ -46,39 +46,39 @@ export const RichTextComponents = {
   block: {
     // Ex. 1: customizing common block types
 		h1: ({ children }: any) => (
-      <h1 className="text-3xl py-5">
+      <h1 className="text-3xl py-5 px-4 md:px-0">
         {children}
       </h1>
 		),
 		h2: ({ children }: any) => (
-      <h2 className="text-1xl py-5">
+      <h2 className="text-1xl py-5 px-4 md:px-0">
         {children}
       </h2>
 		),
 		h3: ({ children }: any) => (
-      <h3 className="text-[30px] font-medium uppercase pt-6">
+      <h3 className="text-[30px] font-medium uppercase pt-6 px-4 md:px-0">
         {children}
       </h3>
 		),
 		h4: ({ children }: any) => (
-      <h4 className="text-2xl pt-1 mt-8 mb-2 font-extralight">
+      <h4 className="text-2xl pt-1 mt-8 mb-2 font-extralight px-4 md:px-0">
         {children}
       </h4>
     ),
     h5: ({ children }: any) => (
-      <h5 className="text-lg pt-1 mt-8 mb-2 font-extralight">
+      <h5 className="text-lg mt-4 font-medium uppercase px-4 md:px-0">
         {children}
       </h5>
     ),
 		blockquote: ({ children }: any) => (
-      <blockquote className="p-4 mb-4 rounded-lg w-11/12 border-l-4 border-[#F7AB0A] bg-gray-800/75 text-xl italic font-light leading-relaxed text-gray-300">
+      <blockquote className="p-4 mb-4 px-4 md:px-0 rounded-lg w-11/12 border-l-4 border-[#F7AB0A] bg-gray-800/75 text-xl italic font-light leading-relaxed text-gray-300">
         {children}
       </blockquote>
 		),
     normal: ({ children }: any) => (
-      <div className="text-[16px] mb-2 font-light md:w-2/3">
+      <p className="px-2 md:px-0 font-light md:w-2/3">
         {children}
-      </div>
+      </p>
     ),
   },
 
@@ -95,26 +95,25 @@ export const RichTextComponents = {
       </ol>
     ),
     checkmarks: ({ children }: any) => (
-      <ol className="m-auto text-lg">{children}</ol>
+      <ol className="m-auto text-lg">
+        {children}
+      </ol>
     ),
   },
 
   marks: {
     link: ({ children, value }: any) => {
 
-				const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined;
+			const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined;
 
       return (
-        <div className='flex bg-white-950 opacity-70 hover:opacity-100 transition duration-300 ease-in-out '>
-					<a
-            href={value.href}
-            target="_blank"
-						rel={rel}
-            className="flex text-lg underline decoration-[#F7AB0A]">
-						{children}
-          </a>
-        </div>
-					);
-        },
-	  },
+        <Link className='flex text-lg pt-2 underline decoration-[#F7AB0A] bg-white-950 opacity-70 hover:opacity-100 transition duration-300 ease-in-out '
+          href={value.href}
+          target="_blank"
+					rel={rel}>
+					{children}
+        </Link>
+			);
+    },
+	},
 }

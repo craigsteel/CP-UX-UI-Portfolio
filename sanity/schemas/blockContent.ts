@@ -43,21 +43,10 @@ export default defineType({
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
-          {
-            title: "URL",
-            name: "link",
-            type: "object",
+          { title: "URL", name: "link", type: "object",
             fields: [
-              {
-                title: "URL",
-                name: "href",
-                type: "url",
-              },
-              {
-                title: "Open in new window",
-                name: "blank",
-                type: "boolean",
-              },
+              { title: "URL", name: "href", type: "url" },
+              { title: "Open in new window", name: "blank", type: "boolean" },
             ],
           },
         ],

@@ -14,7 +14,7 @@ function Featured({posts}:Props) {
   return (
 
     <div> {posts?.map((post) => (
-      <div key={post._id} className='relative flex flex-col md:flex-row my-14 md:my-14 mx-5 md:mx-32 background-card'>
+      <div key={post._id} className='relative flex flex-col md:flex-row my-6 md:my-14 md:mx-32 background-card'>
 
 				{post.categories?.map((category) => (
 					<div key={category._id}
