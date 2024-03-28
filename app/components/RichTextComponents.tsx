@@ -66,17 +66,17 @@ export const RichTextComponents = {
       </h4>
     ),
     h5: ({ children }: any) => (
-      <h5 className="text-lg mt-4 font-medium uppercase px-4 md:px-0">
+      <h5 className="text-lg mt-4 font-medium uppercase pl-4 md:pl-12">
         {children}
       </h5>
     ),
 		blockquote: ({ children }: any) => (
-      <blockquote className="p-4 mb-4 px-4 md:px-0 rounded-lg w-11/12 border-l-4 border-[#F7AB0A] bg-gray-800/75 text-xl italic font-light leading-relaxed text-gray-300">
+      <blockquote>
         {children}
       </blockquote>
 		),
     normal: ({ children }: any) => (
-      <p className="px-2 md:px-0 font-light md:w-2/3">
+      <p className="pl-4 md:pl-12 font-light md:w-2/3">
         {children}
       </p>
     ),

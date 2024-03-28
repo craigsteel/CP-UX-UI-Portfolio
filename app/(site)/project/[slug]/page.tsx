@@ -62,7 +62,7 @@ async function Project({ params: { slug } }: Props) {
 				<section className="md:mx-10">
 					<div className="relative md:mx-10 z-1">
             <header className="mt-8 md:ml-6">
-              <h1 className="text-6xl px-4 md:px-0 text-white uppercase font-light">
+              <h1 className="text-6xl px-4 md:px-12 text-white uppercase font-light">
 								{post.title}
               </h1>
 

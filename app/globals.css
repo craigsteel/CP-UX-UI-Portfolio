@@ -81,8 +81,8 @@
     @apply text-[14px];
   }
 
-  .blockquote {
-    @apply px-4 mb-6 border-l-4 font-extralight border-slate-700 text-3xl italic;
+  blockquote {
+    @apply p-4 my-4 rounded-lg w-11/12 border-l-4 border-[#F7AB0A] bg-gray-800/75 text-xl italic font-light leading-relaxed text-gray-300;
   }
 }
 
