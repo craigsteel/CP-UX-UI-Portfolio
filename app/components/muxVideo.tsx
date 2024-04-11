@@ -24,7 +24,6 @@ function Video({posts}:Props) {
             streamType="on-demand"
             playbackId={post.playbackId}
             metadata={{ video_title: post.title }}
-            style={{ aspectRatio: 16 / 9, borderRadius: 0.5 }}
             loop
             muted
             autoPlay="muted"

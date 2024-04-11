@@ -4,11 +4,18 @@ import Image from 'next/image';
 import { urlFor } from './../../sanity/lib/image'
 import { Post } from '../../typings';
 import ClientSideRoute from './ClientSideRoute';
+import styled from 'styled-components';
 import MuxPlayer from '@mux/mux-player-react';
 
 type Props = {
 	posts: Post[];
 }
+
+const StyledWrapper = styled.div`
+  aspect-ratio: 16 / 9;
+  border-radius: 6px; // Adjust as needed
+  overflow: hidden; // Optional to prevent content overflow
+`;
 
 function Featured({posts}:Props) {
   return (
@@ -60,16 +67,17 @@ function Featured({posts}:Props) {
 				</div>
 
         <div className='md:flex w-full md:w-2/3 pb-8 rounded-2xl drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]'>
+        <StyledWrapper>
           <MuxPlayer
             streamType="on-demand"
             playbackId={post.playbackId}
             metadata={{ video_title: post.title }}
-            // style={{ borderRadius: 16 / 9 }}
             loop
             muted
             autoPlay="muted"
-            className="rounded-lg aspect-video drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]">
-          </MuxPlayer>
+            className="drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]">
+            </MuxPlayer>
+          </StyledWrapper>
 
           {/* <Image
 						src={urlFor(post.mainImage).url()}
