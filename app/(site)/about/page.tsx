@@ -7,16 +7,16 @@ export default function About() {
   return (
     <div>
       <Hero
-        heading='All About Me'
-        message='I am a multidisciplinary UI/UX creative based in the UK. With a background of over 20 years in branding, corporate and web design, I bring a wealth of experience and knowledge to each project that can help clients to identify and solve their communication problems, creating a better and more enjoyable online user experience.'
+        heading='About Me'
+        message='My passion for design has enabled me to pursue a career that I love, whether in advertising with its dynamic pace of the studio, deadlines and creative teams, to the corporate world of annual reporting, strategic marketing of brands to UX/UI Design and Development of web applications.
+Over the years I have gained a vast amount of knowledge in leading teams, presenting, pitching to clients, working alongside developers, managing budgets and working to tight deadlines.'
 				subheading=''
 			/>
-      <main className="flex min-h-screen text-4xl flex-col items-center justify-between">
+      <main className="mx-5 md:mx-10 mt-10">
         <Journey />
-        <Workflow />
         <ToolsUsed />
+        <Workflow />
       </main>
     </div>
-
-    )
+  )
 }

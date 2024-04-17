@@ -6,11 +6,6 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'number',
-      title: 'Number',
-      type: 'number',
-    }),
-    defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
@@ -18,6 +13,11 @@ export default defineType({
     defineField({
       name: 'role',
       title: 'Role',
+      type: 'text',
+    }),
+    defineField({
+      name: 'sector',
+      title: 'Sector',
       type: 'text',
     }),
     defineField({

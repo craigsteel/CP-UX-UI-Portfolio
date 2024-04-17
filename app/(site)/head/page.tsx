@@ -2,8 +2,6 @@ import '../../globals.css'
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 
-
-
 // If loading a variable font, you don't need to specify the font weight
 const open_sans = Open_Sans({
   subsets: ['latin'],
@@ -18,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <section>
+      <section className={`${open_sans.variable} font-sans`}>
 
         </section>
     )

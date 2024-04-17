@@ -2,40 +2,39 @@ import type { PortableTextBlock } from '@portabletext/types'
 import type { Image } from 'sanity'
 
 type Base = {
-    _createdAt: Date;
-    _id: string;
-    _rev: string;
-    _type: string;
-    _updatedAt: string;
+  _createdAt: string;
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: string;
 }
 
-interface Post extends Base{
+interface Post extends Base {
+  playbackId: string;
   title: string;
   categories: Category[];
+  videofrontend: string;
   backgroundImage: Image;
   mainImage: Image;
+  mainImageProject: Image;
   image: Image;
   public_id: string;
   resource_type: string;
   type: string;
+  videoinput: string;
   format: string;
   version: number;
-  videoinput: File;
+  video: string;
   url: string;
-  youtube: PortableTextBlock[]
+  youtube: PortableTextBlock[];
   mobileImage: Image;
   slug: Slug;
   body: PortableTextBlock[];
   content: PortableTextBlock[];
   description: PortableTextBlock[];
-  challenge: PortableTextBlock[];
-  site?: string;
-  tags?: string[];
-  playbackId: string;
-  role: string;
-  number: number;
-  title?: string;
-  }
+  overview?: PortableTextBlock[];
+  tags: string[];
+}
 
 interface Author extends Base{
   bio: Block[];
@@ -44,12 +43,12 @@ interface Author extends Base{
   slug: Slug;
 }
 
-interface richText extends Base {
-  video_id: string;
-  _id: string;
+interface videofrontend extends Base {
   title: string;
   playbackId: string;
-  public_id: string;
+}
+
+interface Video {
   asset: Reference;
   url: string;
   public_id: string;
@@ -66,32 +65,12 @@ interface Slug {
   current: string;
 }
 
-interface richText {
+interface Block {
   _key: string;
   _type: "block";
   children: Span[];
   markDefs: any[];
   style: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
-}
-
-interface Block {
-    _key: string;
-    _type: "block";
-    children: Span[];
-    markDefs: any[];
-    style: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
-}
-
-interface videofrontend extends Base {
-    title: string;
-    playbackId: string;
-}
-
-interface Video {
-    asset: Reference;
-    url: string;
-    public_id: string;
-    _key: string;
 }
 
 interface Span {
@@ -106,9 +85,21 @@ interface Category extends Base {
 	number: number;
   description: string;
   title: string;
+  sector: string;
+}
+
+interface videoinput {
+  _type: "file";
+  asset: Reference;
+  url: string;
 }
 
 interface backgroundImage {
+  _type: "image";
+  asset: Reference;
+}
+
+interface mainImageProject {
   _type: "image";
   asset: Reference;
 }

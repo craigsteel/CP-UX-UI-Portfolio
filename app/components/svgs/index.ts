@@ -1,0 +1,1 @@
+export {default as InfinitySymbol} from './InfinitySymbol.svg'
