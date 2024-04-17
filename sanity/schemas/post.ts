@@ -77,24 +77,24 @@ export default defineType({
       name: "author",
       title: "Author",
       type: "reference",
-      to: {
-        type: "author",
-      },
+        to: {
+          type: "author",
+        },
     }),
     defineField({
       name: "categories",
       title: "Categories",
       type: "array",
-      of: [
-        defineArrayMember({
-          type: "reference",
-          to: [
-            {
-              type: "category",
-            },
-          ],
-        }),
-      ],
+        of: [
+          defineArrayMember({
+            type: "reference",
+            to: [
+              {
+                type: "category",
+              },
+            ],
+          }),
+        ],
     }),
     defineField({
       name: "publishedAt",
