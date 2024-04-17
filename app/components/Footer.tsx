@@ -31,7 +31,7 @@ export default function Footer() {
 
       <div className="flex flex-row space-x-5 py-5">
         <SocialIcon
-          url="https://github.com/craigsteel/cp-next-sanity-portfolio"
+            url="https://github.com/craigsteel/CP-UX-UI-Portfolio.git"
           target="_blank"
           rel="noopener noreferrer"
           style={{ height: 30, width: 30 }}
