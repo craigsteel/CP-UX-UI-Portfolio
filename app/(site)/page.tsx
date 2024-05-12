@@ -8,7 +8,6 @@ const query = groq`
 *[_type == "post"] | order(number, desc)[0..6]{
   ...,
   number,
-  "slug": slug.current,
   publishedAt,
   categories[]->,
   body[],

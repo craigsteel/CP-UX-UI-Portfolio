@@ -64,12 +64,12 @@ export const RichTextComponents = {
       </h3>
 		),
 		h4: ({ children }: any) => (
-      <h4 className="text-2xl pt-1 mt-8 mb-2 font-extralight px-4 md:px-0">
+      <h4 className="text-2xl mt-8 mb-2 font-light px-4 md:px-12">
         {children}
       </h4>
     ),
     h5: ({ children }: any) => (
-      <h5 className="text-lg mt-4 font-medium uppercase pl-4 md:pl-12">
+      <h5 className="text-[14px] mb-2 font-medium uppercase pl-4 md:pl-12">
         {children}
       </h5>
     ),
@@ -79,17 +79,17 @@ export const RichTextComponents = {
       </blockquote>
 		),
     normal: ({ children }: any) => (
-      <p className="pl-4 md:pl-12 font-light md:w-2/3">
+      <div className="pl-4 space-y-{20px} md:pl-12 font-light md:w-2/3">
         {children}
-      </p>
+      </div>
     ),
   },
 
   list: {
     // Ex. 1: customizing common list types
     bullet: ({ children }: any) => (
-      <ul className="mt-xl">
-        {children}
+      <ul className="pl-4 md:pl-16 font-light md:w-2/3">
+          {children}
       </ul>
     ),
     number: ({ children }: any) => (

@@ -1,4 +1,3 @@
-
 'use client'
 import Image from 'next/image';
 import { urlFor } from './../../sanity/lib/image'
@@ -66,7 +65,7 @@ function Featured({posts}:Props) {
 				</div>
 
         <div className='md:flex w-full md:w-2/3 pb-8 rounded-2xl drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]'>
-        <StyledWrapper>
+          <StyledWrapper>
             <MuxPlayer
               streamType="on-demand"
               playbackId={post.playbackId}
@@ -77,24 +76,7 @@ function Featured({posts}:Props) {
               className="drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)] bg-cardblue">
             </MuxPlayer>
           </StyledWrapper>
-
-          {/* <Image
-						src={urlFor(post.mainImage).url()}
-						alt={post.title}
-						width={902}
-						height={508}
-						quality={100}
-						className="object-cover rounded-lg drop-shadow-[0px_10px_10px_rgba(0,0,0,0.8)]"
-          /> */}
-
         </div>
-
-        {/* <div className='projectButton '>
-          <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
-            <p className='text-sm'>Read the full story</p>
-          </ClientSideRoute>
-        </div> */}
-
 			</div>
 		))}
 	</div>
