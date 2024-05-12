@@ -2,12 +2,20 @@
 export default function Journey() {
 
   const echo = [
-    'UI/UX Design', 'User Flow', 'Site Mapping', 'WireFrames', 'Creating Client Briefs', 'Prototyping', 'Commissioning Photographers', 'Illustrators and Developers', 'Project management', 'Workshops', 'Print Design', 'Team Management', 'Client Presentations'
+    'Dynamax E-commerce & Social Media: Designed a new e-commerce web application resulting in a 14 % sales increase. Additionally I created a social media campaign that boosted Facebook likes from 4,7k to 80k and Instagram followers from 900 to over 18k.',
+    'Oakham Ales E-commerce Redesign: Led a complete redesign of the Oakham Ales e-commerce site, prioritising user experience.',
+    'Echo Web Solutions Branding & Design: Project managed and designed Echo Web Solutions brand, brand guidelines, webpages, and signage.',
   ];
   const csd = [
-    'UI/UX Design', 'User Flow', 'Branding', 'Annual Reports', 'Photographic art direction', 'Commissioning Outside Resource', 'Client Presentations', 'Project management', 'Print', 'Packaging'
+    'Lead designer for Spam (e-commerce), working closely with SPAM UK,(Hormel Foods USA) and their Developers',
+    'Lead designer for Elemental DB (NoSQL database) brand and SaaS app',
+    'Designed and built e-commerce applications for Mortar & Milk (bespoke skin clinic)',
   ];
-  const effect = ['Creative output', 'Branding', 'Annual Reports', 'Photographic art direction', 'Commissioning Photographers', 'Commissioning illustrators', 'Presenting to clients', 'Creative team management', 'Project management', 'Final print'
+
+  const effect = [
+    'Designing annual reports for prestigious clients like Manchester United, Vickers, and Thomas Cook',
+    'Created branding for American Express and British Airways Caledonian',
+    'I spearheaded direct marketing campaigns for American Express.'
   ];
 
   return (
@@ -21,7 +29,12 @@ export default function Journey() {
           <div className=''>
             <h4 className="text-[16px] pt-0">ECHO WEB SOLUTIONS</h4>
             <p className="font-medium text-[14px]">UI UX SENIOR DESIGNER - 2021-23</p>
-            <p className="font-bold text-[14px]">SKILLS</p>
+            <p className="font-light text-[14px]">I lead UI/UX projects from initial concept to launch, ensuring a smooth user experience. Through
+              workshops, interviews, and user testing, I translate client goals into intuitive designs and collaborate
+              with developers for flawless implementation.</p>
+            <p className="font-medium text-[14px]">
+            Here are some impactful results I achieved:
+            </p>
             <ul className="list-disc">
               { echo.map((echo, index) =>
                 (<li key={index} >{ echo }</li>))}
@@ -29,8 +42,13 @@ export default function Journey() {
           </div>
           <div className=''>
             <h4 className="text-[16px] pt-0">CRAIG STEEL DESIGN</h4>
-            <p className="font-medium text-[14px] uppercase">Senior Designer - 2012-20</p>
-            <p className="font-bold text-[14px]">SKILLS</p>
+            <p className="font-medium text-[14px] uppercase">UI/UX Senior Designer - 2013-2021</p>
+            <p className="font-light text-[14px]">
+              Founded my own design agency, tackling branding and UI/UX projects for e-commerce, businesses, and SaaS companies.
+              <p className="font-medium text-[14px]">
+                Here are some impactful results I achieved:
+              </p>
+            </p>
             <ul className="list-disc">
               {csd.map((csd, index) =>
                 (<li key={index}>{csd}</li>)
@@ -38,23 +56,34 @@ export default function Journey() {
             </ul>
           </div>
           <div className=''>
-            <h4 className="text-[16px] pt-0">THE FUSION EFFECT</h4>
-            <p className="font-medium text-[14px] uppercase">Senior Designer - 2003-10</p>
-            <p className="font-bold text-[14px]">SKILLS</p>
+            <h4 className="text-[16px] pt-0">CAIRNES DESIGN</h4>
+            <p className="font-medium text-[14px] uppercase">Senior Designer - 1994-2013</p>
+            <p className="font-light text-[14px]">
+              Thrived in a 20-person design agency ranked within the top 50 by Creative Review and Designweek.
+              We tackled branding, corporate identity, direct mail, and exhibition projects. As a senior designer, I
+              mentored juniors, assembled teams for large projects and pitches, delivered client presentations, and
+              ensured adherence to timelines and budgets.
+            </p>
+            <p className="font-medium text-[14px]">
+              Here are some impactful results I achieved:
+            </p>
             <ul className="list-disc">
               {effect.map((effect, index) =>
                 (<li key={index}>{effect}</li>)
               )}
             </ul>
             <div className='pt-4 mb-10'>
-              <h4>CAIRNES DESIGN</h4>
-              <p className="font-medium text-[14px] uppercase">Senior Designer - 1994-03</p>
+              <h4>CLOCKWORK</h4>
+              <p className="font-medium text-[14px] uppercase">Design Project Manager - 1992-1994</p>
+              <p className="font-light text-[14px]">
+                A Design Agency specialising in Branding, Marketing, B2B, Direct Mail.
+              </p>
             </div>
           </div>
 
           <div className="absolute bottom-5 text-white right-10 px-3 py-2 rounded-md uppercase text-sm font-thin bg-slate-800 opacity-100 hover:opacity-100 transition duration-300 ease-in">
             <a
-              href="/Craig Parfitt CV 2023.pdf"
+              href="/Craig Parfitt CV - UI UX 2024.pdf"
               target="_blank"
               download>
               Download My CV{" "}

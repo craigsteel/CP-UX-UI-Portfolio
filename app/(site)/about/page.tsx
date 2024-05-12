@@ -8,8 +8,7 @@ export default function About() {
     <div>
       <Hero
         heading='About Me'
-        message='My passion for design has enabled me to pursue a career that I love, whether in advertising with its dynamic pace of the studio, deadlines and creative teams, to the corporate world of annual reporting, strategic marketing of brands to UX/UI Design and Development of web applications.
-Over the years I have gained a vast amount of knowledge in leading teams, presenting, pitching to clients, working alongside developers, managing budgets and working to tight deadlines.'
+        message="Driven by a passion for design, I've built a successful career spanning diverse creative fields. My journey began in the fast-paced world of advertising, where I honed my ability to manage deadlines and collaborate effectively with creative teams. This experience ignited a passion for brands, leading me to a design consultancy where I thrived in crafting impactful brand identities, annual reports, corporate brochures, and marketing campaigns for prestigious clients like American Express, Manchester United, British Airways, and Mitsubishi. For the past decade, I've shifted my focus to UX/UI design and development, specialising in crafting intuitive and user-centric experiences for e-commerce, corporate, and SaaS web applications."
 				subheading=''
 			/>
       <main className="mx-5 md:mx-10 mt-10">

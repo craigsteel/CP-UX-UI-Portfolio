@@ -12,9 +12,12 @@ export const RichTextComponents = {
 			const { width, height } = getImageDimensions(value);
 
       return (
-				<img
+				<Image
 					src={urlFor(value).url()}
-					alt={value.alt || " "}
+          alt={value.alt || " "}
+          width={902}
+          height={506}
+          quality={100}
           loading="lazy"
           className="w-full"
         />
@@ -28,7 +31,7 @@ export const RichTextComponents = {
       const language = value.language;
 
       return (
-        <div className="bg-gray-900 rounded-lg p-4 my-4">
+        <div className="bg-white p-4 my-4">
           <div className="flex justify-between mb-2">
             <p className="text-gray-400">{filename}</p>
             <p className="text-gray-400">
@@ -56,7 +59,7 @@ export const RichTextComponents = {
       </h2>
 		),
 		h3: ({ children }: any) => (
-      <h3 className="text-[30px] font-medium uppercase pt-6 px-4 md:px-0">
+      <h3 className="text-3xl font-medium uppercase pt-6 px-4 md:px-0">
         {children}
       </h3>
 		),

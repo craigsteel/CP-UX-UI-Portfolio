@@ -12,16 +12,7 @@
         ]
       }
     ],
-<<<<<<< HEAD
-    "axe/structure": [
-      "default",
-      {
-        "listitem": "off"
-      }
-    ]
-=======
     "axe/forms": "off"
->>>>>>> main
   },
   "browserslist": [
     "defaults",

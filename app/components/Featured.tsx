@@ -6,6 +6,8 @@ import { Post } from '../../typings';
 import ClientSideRoute from './ClientSideRoute';
 import styled from 'styled-components';
 import MuxPlayer from '@mux/mux-player-react';
+import PortableText from 'react-portable-text';
+import { RichTextComponents } from './RichTextComponents';
 
 type Props = {
 	posts: Post[];
@@ -15,6 +17,7 @@ const StyledWrapper = styled.div`
   aspect-ratio: 16 / 9;
   border-radius: 6px; // Adjust as needed
   overflow: hidden; // Optional to prevent content overflow
+  background-color: #010b2c;
 `;
 
 function Featured({posts}:Props) {
@@ -25,33 +28,29 @@ function Featured({posts}:Props) {
 
 				{post.categories?.map((category) => (
 					<div key={category._id}
-            className='flex w-full md:w-1/3 flex-col md:pr-10'>
-
-						<h2 className='text-3xl pt-4 pb-2 font-extralight'>
-							{category.title}
-            </h2>
-            <div className="text-[14px] font-extralight mb-4 line-clamp-6 leading-6">
-              {category.description}
-            </div>
-            <div className='md:text-[14px] uppercase'>
-              Role
-            </div>
-            <div className="text-[14px] font-light pb-4">
-              {category.role}
-            </div>
-            <div className='md:text-[14px] uppercase'>
-              Sector
-            </div>
-            <div className="text-[14px] font-light pb-4">
-              {category.sector}
-            </div>
-
-            <div className='hidden md:flex absolute bottom-8 opacity-70 hover:opacity-100 bg-slate-950 p-2 rounded-sm transition duration-500 ease-in-out'>
-							<ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
-                <p className='text-sm uppercase'>Read the full story</p>
-							</ClientSideRoute>
-						</div>
-
+            className='flex w-full md:w-1/3 flex-col md:pr-8'>
+            <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
+              <h2 className='text-3xl pt-2 uppercase font-extralight'>
+                {category.title}
+              </h2>
+              <div className="text-[14px] font-normal pb-2">
+                {category.sector}
+              </div>
+              <div className="text-[14px] font-extralight mb-4 line-clamp-3 md:line-clamp-4 lg:line-clamp-8 leading-6">
+                {category.description}
+              </div>
+              <div className='md:text-[14px] uppercase'>
+                Role
+              </div>
+              <div className="text-[14px] font-light pb-4">
+                {category.role}
+              </div>
+              <div className='md:text-[14px] uppercase'>
+              </div>
+              <div className='text-sm font-extralight uppercase opacity-70 hover:opacity-100 bg-slate-950 p-2 rounded-sm transition duration-500 ease-in-out'>
+                Read the full story
+              </div>
+            </ClientSideRoute>
 					</div>
 				))}
 
@@ -68,14 +67,14 @@ function Featured({posts}:Props) {
 
         <div className='md:flex w-full md:w-2/3 pb-8 rounded-2xl drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]'>
         <StyledWrapper>
-          <MuxPlayer
-            streamType="on-demand"
-            playbackId={post.playbackId}
-            metadata={{ video_title: post.title }}
-            loop
-            muted
-            autoPlay="muted"
-            className="drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]">
+            <MuxPlayer
+              streamType="on-demand"
+              playbackId={post.playbackId}
+              metadata={{ video_title: post.title }}
+              loop
+              muted
+              autoPlay="muted"
+              className="drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)] bg-cardblue">
             </MuxPlayer>
           </StyledWrapper>
 
@@ -90,11 +89,11 @@ function Featured({posts}:Props) {
 
         </div>
 
-        <div className='projectButton md:hidden'>
+        {/* <div className='projectButton '>
           <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
             <p className='text-sm'>Read the full story</p>
           </ClientSideRoute>
-        </div>
+        </div> */}
 
 			</div>
 		))}

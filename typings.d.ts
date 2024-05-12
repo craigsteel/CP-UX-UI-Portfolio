@@ -70,7 +70,7 @@ interface Block {
   _type: "block";
   children: Span[];
   markDefs: any[];
-  style: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
+  styles: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
 }
 
 interface Span {
@@ -84,6 +84,7 @@ interface Category extends Base {
 	role: string;
 	number: number;
   description: string;
+  introduction: PortableTextBlock[];
   title: string;
   sector: string;
 }

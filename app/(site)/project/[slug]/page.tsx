@@ -82,7 +82,7 @@ async function Project({ params: { slug } }: Props) {
 							/>
 						</div>
 
-            <div className="z-30">
+            <div className="z-30 bg-white text-black">
 							<PortableText value={post.body} components={RichTextComponents} />
             </div>
 

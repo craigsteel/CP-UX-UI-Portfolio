@@ -8,6 +8,7 @@ const query = groq`
 *[_type == "post"] | order(number, desc)[0..6]{
   ...,
   number,
+  "slug": slug.current,
   publishedAt,
   categories[]->,
   body[],
@@ -21,8 +22,8 @@ export default async function Page() {
     <>
       <div>
         <Hero
-          heading="Welcome, thank you for visiting my portfolio which focuses on UI/UX Design."
-          message="I'am a UK-based UI /UX designer with 20+ years of experience in branding, corporate, and UX/UI web design. My design passion has fuelled a diverse career. I honed leadership, presentation, and client-facing skills, collaborating with developers and managing budgets to deliver successful projects on tight deadlines. I help clients solve communication challenges and craft exceptional online experiences that users love."
+          heading="Hi, thanks for visiting my portfolio that focuses on UI/UX Design."
+          message="I'm a UK-based UI/UX designer with 20+ years of experience in branding, corporate, and UX/UI. My design passion has fuelled a diverse career. I honed leadership, presentation, and client-facing skills, collaborating with developers and managing budgets to deliver successful projects on tight deadlines. I help clients solve communication challenges and craft exceptional online experiences that users love."
           subheading="Featured Projects" />
       </div>
       <Featured posts={posts} />
