@@ -1,5 +1,6 @@
 import Hero from "@/app/components/Hero";
 import Journey from "@/app/components/Journey";
+import Skills from "@/app/components/Skills";
 import ToolsUsed from "@/app/components/ToolsUsed";
 import Workflow from "@/app/components/WorkFlow";
 
@@ -13,6 +14,7 @@ export default function About() {
 			/>
       <main className="mx-5 md:mx-10 mt-10">
         <Journey />
+        <Skills />
         <ToolsUsed />
         <Workflow />
       </main>

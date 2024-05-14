@@ -1,21 +1,17 @@
-import Image from "next/image";
+import Link from "next/link";
 
-import profilePic from './../../images/craig.png'
+interface Props{
+  title?: string;
+  className?: string;
+}
 
-function Logo(props: any) {
-    const { renderDefault, title } = props;
+const Logo = ({ title, className }:Props) => {
 
-    return (
-        <div className="flex items-center space-x-2">
-            <Image
-                className="rounded-full object-cover"
-                height={50}
-                width={50}
-                src={profilePic}
-                alt="logo"
-            />
-            <>{renderDefault(props)}</>
-        </div>
+  return (
+    <div className={`flex flex-wrap space-x-2 text-[20px] font-light md:text-1xl md:opacity-70 ease-in-out duration-300 hover:opacity-100 ${className}`}>
+          {title || 'Portfolio'}
+    </div>
+
     )
 }
 

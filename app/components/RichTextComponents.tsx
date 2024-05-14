@@ -59,7 +59,7 @@ export const RichTextComponents = {
       </h2>
 		),
 		h3: ({ children }: any) => (
-      <h3 className="text-3xl font-medium uppercase pt-6 px-4 md:px-0">
+      <h3 className="text-2xl font-normal pt-2 px-4 md:px-12">
         {children}
       </h3>
 		),
