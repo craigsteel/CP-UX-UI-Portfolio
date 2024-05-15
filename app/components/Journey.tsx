@@ -1,21 +1,35 @@
 
 export default function Journey() {
 
+  const echostart = [
+    'Led UI/UX projects from concept to launch, ensuring seamless user experiences.',
+    'Translated client goals into intuitive designs through workshops, interviews, and user testing.',
+    'Collaborated with developers for flawless implementation.',
+  ];
   const echo = [
-    'Dynamax E-commerce & Social Media: Designed a new e-commerce web application resulting in a 14 % sales increase. Additionally I created a social media campaign that boosted Facebook likes from 4,7k to 80k and Instagram followers from 900 to over 18k.',
-    'Oakham Ales E-commerce Redesign: Led a complete redesign of the Oakham Ales e-commerce site, prioritising user experience.',
-    'Echo Web Solutions Branding & Design: Project managed and designed Echo Web Solutions brand, brand guidelines, webpages, and signage.',
+    'Designed a new e-commerce web app for Dynamax, resulting in a 14% sales increase',
+    'Increased social media presence for Dynamax: Facebook likes (4,700 to 80,000+) and Instagram followers (900 to 18,000+)',
+    'Led a complete user-centric redesign of the Oakham Ales e-commerce site',
+    'Project managed and designed Echo Web Solutions brand, guidelines, webpages, and signage.',
+  ];
+  const csdstart = [
+    'Founded my own design agency specialising in branding and UI/UX projects for diverse clients: e-commerce, businesses, and SaaS companies (UK & International).',
   ];
   const csd = [
-    'Lead designer for Spam (e-commerce), working closely with SPAM UK,(Hormel Foods USA) and their Developers',
-    'Lead designer for Elemental DB (NoSQL database) brand and SaaS app',
-    'Designed and built e-commerce applications for Mortar & Milk (bespoke skin clinic)',
+    'Won a pitch for branding and web application for Strauss Logistics (fuel distribution leader, Central & Southern Africa)',
+    'Led design for Spam (e-commerce) in collaboration with SPAM UK (Hormel Foods USA) and their developers',
+    'Led design for Elemental DB (NoSQL database) brand and SaaS app',
+    'Designed and built e-commerce applications for Mortar & Milk (bespoke skin clinic).',
   ];
-
-  const effect = [
-    'Designing annual reports for prestigious clients like Manchester United, Vickers, and Thomas Cook',
+  const cairnesstart = [
+    'Thrived in a top 50 design agency (Creative Review & DesignWeek)',
+    'Expertise in branding, corporate identity, direct mail, and exhibition projects',
+    'Mentored junior designers, Led, assembled project and pitch teams, delivered client presentations, and ensured adherence to timelines and budgets.',
+  ];
+  const cairnes = [
+    'Designed annual reports for prestigious clients (Manchester United, Vickers, Thomas Cook)',
     'Created branding for American Express and British Airways Caledonian',
-    'I spearheaded direct marketing campaigns for American Express.'
+    'Spearheaded successful direct marketing campaigns for American Express.',
   ];
 
   return (
@@ -29,11 +43,14 @@ export default function Journey() {
           <div className=''>
             <h4 className="text-[16px] pt-0">ECHO WEB SOLUTIONS</h4>
             <p className="font-medium text-[14px]">UI UX SENIOR DESIGNER - 2021-23</p>
-            <p className="font-light text-[14px]">I lead UI/UX projects from initial concept to launch, ensuring a smooth user experience. Through
-              workshops, interviews, and user testing, I translate client goals into intuitive designs and collaborate
-              with developers for flawless implementation.</p>
+            <p className="font-light text-[14px]">
+              <ul className="list-disc">
+                {echostart.map((echostart, index) =>
+                  (<li key={index} >{ echostart }</li>))}
+              </ul>
+            </p>
             <p className="font-medium text-[14px]">
-            Here are some impactful results I achieved:
+            Impact:
             </p>
             <ul className="list-disc">
               { echo.map((echo, index) =>
@@ -44,9 +61,12 @@ export default function Journey() {
             <h4 className="text-[16px] pt-0">CRAIG STEEL DESIGN</h4>
             <p className="font-medium text-[14px] uppercase">UI/UX Senior Designer - 2013-2021</p>
             <p className="font-light text-[14px]">
-              Founded my own design agency, tackling branding and UI/UX projects for e-commerce, businesses, and SaaS companies.
+              <ul className="list-disc">
+                {csdstart.map((csdstart, index) =>
+                  (<li key={index} >{csdstart}</li>))}
+              </ul>
               <p className="font-medium text-[14px]">
-                Here are some impactful results I achieved:
+                Impact:
               </p>
             </p>
             <ul className="list-disc">
@@ -55,30 +75,30 @@ export default function Journey() {
               )}
             </ul>
           </div>
-          <div className=''>
+          <div className='pb-12'>
             <h4 className="text-[16px] pt-0">CAIRNES DESIGN</h4>
             <p className="font-medium text-[14px] uppercase">Senior Designer - 1994-2013</p>
             <p className="font-light text-[14px]">
-              Thrived in a 20-person design agency ranked within the top 50 by Creative Review and Designweek.
-              We tackled branding, corporate identity, direct mail, and exhibition projects. As a senior designer, I
-              mentored juniors, assembled teams for large projects and pitches, delivered client presentations, and
-              ensured adherence to timelines and budgets.
+              <ul className="list-disc">
+                {cairnesstart.map((cairnesstart, index) =>
+                  (<li key={index} >{cairnesstart}</li>))}
+              </ul>
             </p>
             <p className="font-medium text-[14px]">
-              Here are some impactful results I achieved:
+              Impact:
             </p>
             <ul className="list-disc">
-              {effect.map((effect, index) =>
-                (<li key={index}>{effect}</li>)
+              {cairnes.map((cairnes, index) =>
+                (<li key={index}>{cairnes}</li>)
               )}
             </ul>
-            <div className='pt-4 mb-10'>
+            {/* <div className='pt-4 mb-10'>
               <h4>CLOCKWORK</h4>
               <p className="font-medium text-[14px] uppercase">Design Project Manager - 1992-1994</p>
               <p className="font-light text-[14px]">
                 A Design Agency specialising in Branding, Marketing, B2B, Direct Mail.
               </p>
-            </div>
+            </div> */}
           </div>
 
           <div className="absolute bottom-5 text-white right-10 px-3 py-2 rounded-md uppercase text-sm font-thin bg-slate-800 opacity-100 hover:opacity-100 transition duration-300 ease-in">
