@@ -14,7 +14,11 @@ const open_sans = Open_Sans({
 export const metadata: Metadata = {
   title: 'Craig Parfitt UI/UX Designer',
   description: 'Craig Parfitt UI/UX Portfolio',
+  verification: {
+    google: 'rOQryTT28MDXzXvLfrJjWTa3GX16RkyJqPhFJEkVis0',
+  }
 }
+
 
 const DynamicNavbarMobile = dynamic(() => import('../components/NavbarMobile'),
   {
