@@ -3,9 +3,8 @@
 import Image from 'next/image';
 import { urlFor } from './../../sanity/lib/image'
 import { Post } from '../../typings';
-import { RichTextComponents } from '@/app/components/RichTextComponents'
-import { PortableText } from "@portabletext/react";
 import ClientSideRoute from './ClientSideRoute';
+import { ArrowDownRightIcon, ArrowUpRightIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
 
 type Props = {
 	posts: Post[];
@@ -14,7 +13,7 @@ type Props = {
 function AllProjects({posts}:Props) {
   return (
     <>
-      <div className="grid gap-6 md:gap-20 md:grid-cols-2">
+      <div className="grid gap-6 md:gap-10 md:grid-cols-2">
 		    {posts?.map(post => (
           <div key={post._id} className='background-card'>
 
@@ -46,9 +45,10 @@ function AllProjects({posts}:Props) {
             </div>
 
             <div className="relative flex rounded uppercase text-[12px] space-x-2 opacity-60 hover:opacity-100 transition duration-300 ease-in-out">
-							<ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
-								<p className='text-sm'>Read the full story</p>
-							</ClientSideRoute>
+                <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
+                  <p className='text-sm flex uppercase'>Read the full story<ArrowRightIcon className="ml-2 mt-1 h-4 w-4" />
+                    </p>
+                </ClientSideRoute>
             </div>
           </>
 				  ))}

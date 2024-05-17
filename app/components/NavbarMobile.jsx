@@ -47,11 +47,11 @@ export default function NavbarMobile () {
               </Link>
             </li>
             <li className='navLink md:text-1xl'>
-              <Link href="mailto:craig@craigparfitt.com"
+              <a href="mailto:craig@craigparfitt.com"
                 target="_blank"
                 rel="noopener noreferrer">
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
 
@@ -89,11 +89,11 @@ export default function NavbarMobile () {
                   </Link>
                 </li>
                 <li onClick={ handleSmallerScreensNavigation } className='py-10 font-bold text-2xl text-center  hover:text-white cursor-pointer'>
-                  <Link href="mailto:craig@craigparfitt.com"
+                  <a href="mailto:craig@craigparfitt.com"
                     target="_blank"
                     rel="noopener noreferrer">
                     Contact
-                  </Link>
+                  </a>
                 </li>
               </ul>
 

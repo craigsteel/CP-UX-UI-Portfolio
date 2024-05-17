@@ -47,7 +47,12 @@
     @apply subpixel-antialiased;
   }
 
-  h1,
+  h1 {
+    @apply text-[2.8rem] md:text-6xl;
+    @apply font-extrabold;
+    @apply subpixel-antialiased;
+  }
+
   h2 {
     @apply text-4xl md:text-6xl;
     @apply font-extrabold;
@@ -62,8 +67,9 @@
   }
 
   .background-card {
-    @apply rounded-lg p-5 bg-gradient-to-tr from-cardblue-950 from-5% via-blue-950 via-80% to-cardblue-950 md:opacity-50 md:hover:opacity-100 md:hover:drop-shadow-1xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out;
+    @apply md:hover:border-[0.5px] border-blue-950 rounded-lg p-5 bg-gradient-to-tr from-cardblue-950 from-5% via-blue-950 via-80% to-cardblue-950 md:opacity-50 md:hover:opacity-100 md:hover:drop-shadow-1xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out;
   }
+
   .flexCenter {
     @apply flex justify-center items-center;
   }
@@ -82,7 +88,7 @@
   }
 
   blockquote {
-    @apply p-4 my-4 rounded-lg w-11/12 border-l-4 border-[#F7AB0A] bg-gray-800/75 text-xl italic font-light leading-relaxed text-gray-300;
+    @apply p-4 my-4 mx-2 rounded-lg w-11/12 border-l-4 border-[#F7AB0A] bg-gray-800/75 text-xl italic font-light leading-relaxed text-gray-300;
   }
 }
 
