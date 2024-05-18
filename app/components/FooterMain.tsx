@@ -49,7 +49,7 @@ export default function Footer() {
           />
 
           <SocialIcon
-            url="https://linkedin.com/in/craig-parfitt-14660a271"
+            url="https://www.linkedin.com/in/craigparfittuiux"
             target="_blank"
             rel="noopener noreferrer"
             style={{ height: 40, width: 40 }}
