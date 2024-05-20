@@ -12,8 +12,8 @@ export default function ToolsUsed() {
         </h2>
 
         <div className='px-10 pb-10 font-light text-slate-950 uppercase grid md:grid-cols-1 md:gap-6 lg:grid-cols-1 lg:gap-6'>
-          <h3>XD • Figma • Photoshop • Illustrator • INDESIGN • Asana • VSC • GITHUB • Google</h3>
-          <style jsx>{`h3 { word-spacing: 1em; }`}</style>
+          <h3>Adobe Creative Suite (XD, Photoshop, Illustrator, Indesign) • Figma • Photoshop • Illustrator • INDESIGN • Asana • Visual Studio Code • Github • Google</h3>
+          <style jsx>{`h3 { word-spacing: .2em; }`}</style>
         </div>
 
       </div>

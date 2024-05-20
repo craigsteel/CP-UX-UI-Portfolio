@@ -6,7 +6,7 @@ export default function Workflow() {
   return (
 
     <section>
-      <div className='relative z-0 md:mx-10 mt-10 mb-20 rounded-lg bg-gradient-to-tr from-white from-40% via-slate-100 via-60% to-white md:opacity-70 opacity-100 md:hover:opacity-100 hover:drop-shadow-[0_0px_70px_rgba(0,0,0,1)] md:hover:scale-105 transition duration-500 ease-in-out'>
+      <div className='md:my-16 relative z-0 md:mx-10 mt-10 mb-20 rounded-lg bg-gradient-to-tr from-white from-40% via-slate-100 via-60% to-white md:opacity-70 opacity-100 md:hover:opacity-100 hover:drop-shadow-[0_0px_70px_rgba(0,0,0,1)] md:hover:scale-105 transition duration-500 ease-in-out'>
         <h2 className="grid pl-5 text-4xl md:pl-10 pt-5 uppercase font-light text-slate-950">
           Workflow
         </h2>

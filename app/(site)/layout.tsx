@@ -29,7 +29,7 @@ export default function RootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${open_sans.variable} font-sans`} >
+    <html lang="en" className={`${open_sans.variable} font-sans !scroll-smooth`} >
       <body>
         <DynamicNavbarMobile />
         {children}

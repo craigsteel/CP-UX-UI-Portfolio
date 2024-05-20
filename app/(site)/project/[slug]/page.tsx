@@ -48,19 +48,19 @@ async function Project({ params: { slug } }: Props) {
 
 	return (
 		<>
-			<div className="z-1 aspect-ratio">
+      <div className="">
 				<Image
 					src={urlFor(post.backgroundImage).url()}
 					alt={post.title}
 					fill={true}
 					quality={100}
-					className="relative w-screen opacity-30 blur-sm"
+          className="aspect-ratio relative z-[-10] w-screen opacity-30 blur-sm"
 				/>
 			</div>
 
 			<article>
 				<section className="md:mx-10">
-					<div className="relative md:mx-10 z-1">
+					<div className="relative md:mx-10">
             <header className="mt-8 mr-4 md:ml-6">
               <h1 className="text-6xl px-4 md:px-12 text-white uppercase font-light">
 								{post.title}

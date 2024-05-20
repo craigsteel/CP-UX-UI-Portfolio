@@ -2,8 +2,7 @@
 
 import Link from "next/link"
 import { SocialIcon } from "react-social-icons"
-import ButtonMailto from "./ButtonMailto"
-
+import ScrollToTopButton from '../components/ScrollToTopButton'
 
 export default function Footer() {
   return (
@@ -26,10 +25,15 @@ export default function Footer() {
     </div>
 
     <div className="text-[14px] font-extralight pb-2">
-          Pen & Paper • Adobe Creative Cloud  (Photoshop, Illustrator, XD and MediaEncoder) •
-      Next.js (Framework) • Sanity (Headless CMS) • Tailwindcss (Utility-first CSS framework) • Mux (Video delivery) • Deployed (via GitHub on Vercel).
+          Pen & Paper • Adobe Creative Cloud  (Photoshop, Illustrator, XD and MediaEncoder) • Next.js (Framework)
+          <br />
+          Sanity (Headless CMS) • Tailwindcss (Utility-first CSS framework) • Mux (Video delivery) • Deployed (via GitHub on Vercel).
     </div>
+        <div>
+          <ScrollToTopButton>
 
+          </ScrollToTopButton>
+    </div>
     <div className="flex flex-row space-x-5 py-5">
         <SocialIcon
           url="https://github.com/craigsteel/CP-UX-UI-Portfolio"

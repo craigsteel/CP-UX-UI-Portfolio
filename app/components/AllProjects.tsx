@@ -25,6 +25,7 @@ function AllProjects({posts}:Props) {
             </div>
 
 						<div className='w-full aspect-video'>
+              <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
 							  <Image
 								  src={urlFor(post.mainImage).url()}
 								  alt={post.title}
@@ -32,6 +33,7 @@ function AllProjects({posts}:Props) {
                   height={508}
 								  quality={100}
 								  className="relative m-auto  rounded-lg my-5" />
+                </ClientSideRoute>
             </div>
 
             <div className="text-[14px] uppercase font-light pb-2">

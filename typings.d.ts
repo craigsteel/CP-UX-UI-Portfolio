@@ -13,7 +13,6 @@ interface Post extends Base {
   playbackId: string;
   title: string;
   categories: Category[];
-  videofrontend: string;
   backgroundImage: Image;
   mainImage: Image;
   mainImageProject: Image;
@@ -43,16 +42,12 @@ interface Author extends Base{
   slug: Slug;
 }
 
-interface videofrontend extends Base {
-  title: string;
-  playbackId: string;
-}
-
 interface Video {
   asset: Reference;
   url: string;
   public_id: string;
   _key: string;
+  playbackId: string;
 }
 
 interface Reference {

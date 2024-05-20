@@ -34,7 +34,7 @@ export default function Journey() {
 
   return (
     <section>
-      <div className='relative z-0 md:mx-10 rounded-lg bg-gradient-to-tr from-white from-40% via-slate-100 via-60% to-white opacity-100 md:opacity-70 md:hover:opacity-100 hover:drop-shadow-[0_0px_70px_rgba(0,0,0,1)] md:hover:scale-105 transition duration-500 ease-in-out'>
+      <div className='md:my-16 relative z-0 md:mx-10 rounded-lg bg-gradient-to-tr from-white from-40% via-slate-100 via-60% to-white opacity-100 md:opacity-70 md:hover:opacity-100 hover:drop-shadow-[0_0px_70px_rgba(0,0,0,1)] md:hover:scale-105 transition duration-500 ease-in-out'>
         <h2 className="grid pl-5 md:pl-10 pt-5 text-4xl uppercase font-light text-slate-950">
           MY JOURNEY
         </h2>
@@ -43,12 +43,12 @@ export default function Journey() {
           <div className=''>
             <h4 className="text-[16px] pt-0">ECHO WEB SOLUTIONS</h4>
             <p className="font-medium text-[14px]">UI UX SENIOR DESIGNER - 2021-23</p>
-            <p className="font-light text-[14px]">
+            <div className="font-light text-[14px]">
               <ul className="list-disc">
                 {echostart.map((echostart, index) =>
                   (<li key={index} >{ echostart }</li>))}
               </ul>
-            </p>
+            </div>
             <p className="font-medium text-[14px]">
             Impact:
             </p>
@@ -60,7 +60,7 @@ export default function Journey() {
           <div className=''>
             <h4 className="text-[16px] pt-0">CRAIG STEEL DESIGN</h4>
             <p className="font-medium text-[14px] uppercase">UI/UX Senior Designer - 2013-2021</p>
-            <p className="font-light text-[14px]">
+            <div className="font-light text-[14px]">
               <ul className="list-disc">
                 {csdstart.map((csdstart, index) =>
                   (<li key={index} >{csdstart}</li>))}
@@ -68,7 +68,7 @@ export default function Journey() {
               <p className="font-medium text-[14px]">
                 Impact:
               </p>
-            </p>
+            </div>
             <ul className="list-disc">
               {csd.map((csd, index) =>
                 (<li key={index}>{csd}</li>)
@@ -78,12 +78,12 @@ export default function Journey() {
           <div className='pb-12'>
             <h4 className="text-[16px] pt-0">CAIRNES DESIGN</h4>
             <p className="font-medium text-[14px] uppercase">Senior Designer - 1994-2013</p>
-            <p className="font-light text-[14px]">
+            <div className="font-light text-[14px]">
               <ul className="list-disc">
                 {cairnesstart.map((cairnesstart, index) =>
                   (<li key={index} >{cairnesstart}</li>))}
               </ul>
-            </p>
+            </div>
             <p className="font-medium text-[14px]">
               Impact:
             </p>
@@ -92,13 +92,6 @@ export default function Journey() {
                 (<li key={index}>{cairnes}</li>)
               )}
             </ul>
-            {/* <div className='pt-4 mb-10'>
-              <h4>CLOCKWORK</h4>
-              <p className="font-medium text-[14px] uppercase">Design Project Manager - 1992-1994</p>
-              <p className="font-light text-[14px]">
-                A Design Agency specialising in Branding, Marketing, B2B, Direct Mail.
-              </p>
-            </div> */}
           </div>
 
           <div className="absolute bottom-5 text-white right-10 px-3 py-2 rounded-md uppercase text-sm font-thin bg-slate-800 opacity-100 hover:opacity-100 transition duration-300 ease-in">

@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import Link from "next/link"
-import React, { useEffect } from 'react'
 import { getImageDimensions } from "@sanity/asset-utils";
-import { urlFor } from './../../sanity/lib/image'
+import { urlFor } from '../../sanity/lib/image'
 
 export const RichTextComponents = {
 
@@ -14,12 +13,12 @@ export const RichTextComponents = {
       return (
 				<Image
 					src={urlFor(value).url()}
-          alt={value.alt || " "}
-          width={902}
-          height={506}
+          alt={value.alt || ' '}
+          width={width}
+          height={height}
           quality={100}
-          loading="lazy"
-          className="w-full"
+          loading='lazy'
+          placeholder='data:image/...' // "empty" | "blur" | "data:image/..."
         />
 			);
 		},

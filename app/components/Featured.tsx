@@ -5,7 +5,7 @@ import { Post } from '../../typings';
 import ClientSideRoute from './ClientSideRoute';
 import styled from 'styled-components';
 import MuxPlayer from '@mux/mux-player-react';
-import { ArrowDownRightIcon, ArrowUpRightIcon } from '@heroicons/react/24/solid';
+import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 
 type Props = {
 	posts: Post[];
