@@ -20,12 +20,10 @@ interface Post extends Base {
   public_id: string;
   resource_type: string;
   type: string;
-  videoinput: string;
   format: string;
   version: number;
   video: string;
   url: string;
-  youtube: PortableTextBlock[];
   mobileImage: Image;
   slug: Slug;
   body: PortableTextBlock[];
@@ -50,9 +48,14 @@ interface Video {
   playbackId: string;
 }
 
+// interface Reference {
+//   _ref: string;
+//   _type: "reference";
+// }
+
 interface Reference {
-  _ref: string;
-  _type: "reference";
+  _type: "slug";
+  current: string;
 }
 
 interface Slug {
@@ -84,11 +87,6 @@ interface Category extends Base {
   sector: string;
 }
 
-interface videoinput {
-  _type: "file";
-  asset: Reference;
-  url: string;
-}
 
 interface backgroundImage {
   _type: "image";

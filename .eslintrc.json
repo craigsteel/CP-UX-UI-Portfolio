@@ -1,6 +1,5 @@
 {
   "extends":[
-    "next/core-web-vitals",
-    "sanity/typescript"
+    "next/core-web-vitals"
   ]
 }

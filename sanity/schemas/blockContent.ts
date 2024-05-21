@@ -30,7 +30,7 @@ export default defineType({
         { title: "H3", value: "h3" },
         { title: "H4", value: "h4" },
         { title: "H5", value: "h5" },
-        { title: "Quote", value: "blockquote" }
+        { title: "Quote", value: "blockquote" },
       ],
       lists: [{ title: "Bullet", value: "bullet" }],
       // Marks let you mark up inline text in the Portable Text Editor
@@ -62,8 +62,5 @@ export default defineType({
         { name: "alt", type: "string", title: "Alternative Text" },
       ],
     }),
-    {
-      type: "youtube",
-    },
   ],
 });

@@ -106,7 +106,9 @@ export const RichTextComponents = {
   marks: {
     link: ({ children, value }: any) => {
 
-			const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined;
+      const rel = !value.href.startsWith('/')
+        ? 'noreferrer noopener'
+        : undefined;
 
       return (
         <Link className='flex text-lg pt-2 underline decoration-[#F7AB0A] bg-white-950 opacity-70 hover:opacity-100 transition duration-300 ease-in-out '
