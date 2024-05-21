@@ -17,7 +17,7 @@ export const RichTextComponents = {
           width={width}
           height={height}
           quality={100}
-          loading='lazy'
+          // loading='lazy'
           placeholder='data:image/...' // "empty" | "blur" | "data:image/..."
         />
 			);
