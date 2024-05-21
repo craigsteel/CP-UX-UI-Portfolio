@@ -86,7 +86,7 @@ function Featured({posts}:Props) {
 
               <div className='projectButton md:hidden'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
-                  <p className='text-sm'>Read the full story</p>
+                  <p className='text-sm inline-flex'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4"></ArrowUpRightIcon></p>
                 </ClientSideRoute>
               </div>
 			      </div>

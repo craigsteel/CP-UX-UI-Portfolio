@@ -15,7 +15,7 @@ const query = groq`
 export default async function Projects() {
 
   const posts = await client.fetch(query);
-
+  // console.log(posts)
     return (
       <div>
         <Hero
@@ -24,7 +24,7 @@ export default async function Projects() {
           subheading=''
         />
 
-        <section className='flex min-h-screen text-4xl flex-col items-center justify-between md:mx-20 md:p-10'>
+        <section className='flex min-h-screen md:mx-20 md:p-10'>
           <AllProjects posts={posts} />
         </section>
       </div>

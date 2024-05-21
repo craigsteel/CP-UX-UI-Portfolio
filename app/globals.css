@@ -67,7 +67,7 @@
   }
 
   .background-card {
-    @apply md:hover:border-[0.5px] border-blue-950 rounded-lg p-5 bg-gradient-to-tr from-cardblue-950 from-5% via-blue-950 via-80% to-cardblue-950 md:opacity-50 md:hover:opacity-100 md:hover:drop-shadow-1xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out;
+    @apply relative md:hover:border-[0.5px] border-blue-950 rounded-lg p-5 bg-gradient-to-tr from-cardblue-950 from-5% via-blue-950 via-80% to-cardblue-950 md:opacity-50 md:hover:opacity-100 md:hover:drop-shadow-1xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out;
   }
 
   .flexCenter {
