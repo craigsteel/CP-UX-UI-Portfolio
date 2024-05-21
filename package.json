@@ -27,6 +27,7 @@
     "mux-embed": "^5.1.0",
     "next": "^14.2.3",
     "next-sanity": "^5.1.2",
+    "eslint-config-next": "13.4.10",
     "postcss": "^8.4.32",
     "react": "18.2.0",
     "react-dom": "18.2.0",
