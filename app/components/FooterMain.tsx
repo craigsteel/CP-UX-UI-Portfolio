@@ -30,9 +30,7 @@ export default function Footer() {
           Sanity (Headless CMS) • Tailwindcss (Utility-first CSS framework) • Mux (Video delivery) • Deployed (via GitHub on Vercel).
     </div>
         <div>
-          <ScrollToTopButton>
-
-          </ScrollToTopButton>
+          <ScrollToTopButton />
     </div>
     <div className="flex flex-row space-x-5 py-5">
         <SocialIcon

@@ -3,14 +3,9 @@ import { PiArrowSquareUpLight } from "react-icons/pi";
 
 export default function ScrollTotopButton () {
   return (
-    <div className="relative z-[300]">
-      <ScrollToTop showUnder={ 160 }>
-        <p className=''>
-          <PiArrowSquareUpLight />
-        </p>
-      </ScrollToTop>
-
-    </div>
+    <ScrollToTop showUnder={800} className='z-30 bg-white opacity-50 hover:opacity-100 transition duration-800 ease-in-out'>
+      <PiArrowSquareUpLight />
+    </ScrollToTop>
   )
 }
 
