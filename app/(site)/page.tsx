@@ -3,6 +3,7 @@ import Featured from '../components/Featured';
 import { groq } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
 
+export const revalidate = 60;
 
 const query = groq`
 *[_type == "post"] | order(number, desc)[0..6]{

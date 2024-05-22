@@ -7,9 +7,11 @@ import styled from 'styled-components';
 import MuxPlayer from '@mux/mux-player-react';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 
-type Props = {
+interface Props {
 	posts: Post[];
 }
+
+export const revalidate = 60;
 
 const StyledWrapper = styled.div`
   aspect-ratio: 16 / 9;

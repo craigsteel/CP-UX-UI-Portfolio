@@ -12,7 +12,7 @@ import { client } from '../../../../sanity/lib/client'
 import { urlFor } from '../../../../sanity/lib/image'
 import ClientSideRoute from "@/app/components/ClientSideRoute";
 
-type Props = {
+interface Props {
 	params: {
 		slug: string;
 	},
@@ -58,45 +58,44 @@ async function Project({ params: { slug } }: Props) {
 				/>
 			</div>
 
-			<article>
-				<section className="md:mx-10">
-					<div className="relative md:mx-10">
-            <header className="mt-8 mr-4 md:ml-6">
-              <h1 className="text-6xl px-4 md:px-12 text-white uppercase font-light">
-								{post.title}
-              </h1>
+        <article>
+          <section className="md:mx-10">
+            <div className="relative md:mx-10">
+              <header className="mt-8 mr-4 md:ml-6">
+                <h1 className="text-6xl px-4 md:px-12 text-white uppercase font-light">
+                  {post.title}
+                </h1>
 
-              <div className="pt-2 text-white">
-                <PortableText value={post.description} components={RichTextComponents} />
+                <div className="pt-2 text-white">
+                  <PortableText value={post.description} components={RichTextComponents} />
+                </div>
+              </header>
+
+              <div className="mt-5">
+                <Image
+                  src={urlFor(post.mainImageProject).url()}
+                  alt={post.title}
+                  width={1150}
+                  height={608}
+                  quality={100}
+                  className="rounded-t-lg md:w-full mx-auto"
+                />
               </div>
-						</header>
 
-						<div className="mt-5">
-							<Image
-								src={urlFor(post.mainImageProject).url()}
-								alt={post.title}
-								width={1150}
-								height={608}
-								quality={100}
-                className="rounded-t-lg md:w-full mx-auto"
-							/>
-						</div>
+              <div className="z-30 bg-white text-black">
+                <PortableText value={post.body} components={RichTextComponents} />
+              </div>
 
-            <div className="z-30 bg-white text-black">
-							<PortableText value={post.body} components={RichTextComponents} />
             </div>
+          </section>
 
-					</div>
-				</section>
-
-        <div className='projectButton relative mt-10 ml-4 md:ml-20'>
-					<ClientSideRoute key={post._id} route={`/projects/${post.slug.current}`}>
-            <div className='text-[18px]'>Back To All Projects</div>
-					</ClientSideRoute>
-				</div>
-			</article>
+          <div className='projectButton relative mt-10 ml-4 md:ml-20'>
+            <ClientSideRoute key={post._id} route={`/projects/${post.slug.current}`}>
+              <div className='text-[18px]'>Back To All Projects</div>
+            </ClientSideRoute>
+          </div>
+        </article>
 		</>
-
 	)
 }
 export default Project

@@ -20,7 +20,7 @@ export default defineConfig({
   muxTokenSecret,
   // Add and edit the content schema in the './sanity/schema' folder
   schema: {
-    types: schemaTypes,
+    types: [...schemaTypes],
   },
   plugins: [
     structureTool(),

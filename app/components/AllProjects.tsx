@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { urlFor } from './../../sanity/lib/image'
 import { Post } from '../../typings';
 import ClientSideRoute from './ClientSideRoute';
-import { ArrowDownRightIcon, ArrowUpRightIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
 
 interface Props {
 	posts: Post[];
@@ -16,12 +16,11 @@ function AllProjects({ posts }: Props) {
     <>
       <div className="grid gap-6 md:gap-10 md:grid-cols-2">
 		    {posts?.map(post => (
-          <div key={post._id} className='background-card'>
+        <div key={post._id} className='background-card'>
 
-				{post.categories?.map(category => (
+				  {post.categories?.map(category => (
           <>
-            <div key={category._id}
-              className='uppercase text-3xl font-light'>
+            <div key={category._id} className='uppercase text-3xl font-light'>
 						  {category.title}
             </div>
 
@@ -38,8 +37,9 @@ function AllProjects({ posts }: Props) {
 								  width={902}
                   height={508}
 								  quality={100}
-								  className="relative m-auto rounded-lg" />
-                </ClientSideRoute>
+                  className="relative m-auto rounded-lg"
+                />
+              </ClientSideRoute>
             </div>
 
             <div className="pb-12 pt-4">
@@ -56,7 +56,6 @@ function AllProjects({ posts }: Props) {
               </ClientSideRoute>
             </div>
           </>
-
         ))}
 			</div>
         ))}
