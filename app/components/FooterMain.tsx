@@ -17,7 +17,7 @@ export default function Footer() {
     <div className="text-[16px] font-light pb-2">
           CRAIG PARFITT
           <br />
-          <a href={`tel:+44786652170`}>Phone Me +44 786 656 2170</a> •&nbsp;<a href={`mailto:info@craigparfitt.com`}>Email Me info@craigparfitt.com</a>
+          <a href={`tel:+44786652170`}>Phone Me: +44 786 656 2170</a> •&nbsp;<a href={`mailto:info@craigparfitt.com`}>Email Me: info@craigparfitt.com</a>
     </div>
 
     <div className="text-[16px] uppercase font-normal">

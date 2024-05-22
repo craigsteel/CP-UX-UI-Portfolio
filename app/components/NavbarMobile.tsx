@@ -47,7 +47,7 @@ export default function NavbarMobile () {
               </Link>
             </li>
             <li className='navLink md:text-1xl'>
-              <a href="mailto:craig@craigparfitt.com"
+              <a href="mailto:info@craigparfitt.com"
                 target="_blank"
                 rel="noopener noreferrer">
                 Contact
