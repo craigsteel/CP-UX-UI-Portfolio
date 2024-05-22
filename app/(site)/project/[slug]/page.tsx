@@ -11,6 +11,7 @@ import { RichTextComponents } from '@/app/components/RichTextComponents'
 import { client } from '../../../../sanity/lib/client'
 import { urlFor } from '../../../../sanity/lib/image'
 import ClientSideRoute from "@/app/components/ClientSideRoute";
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 interface Props {
 	params: {
@@ -91,7 +92,10 @@ async function Project({ params: { slug } }: Props) {
 
           <div className='projectButton relative mt-10 ml-4 md:ml-20'>
             <ClientSideRoute key={post._id} route={`/projects/${post.slug.current}`}>
-              <div className='text-[18px]'>Back To All Projects</div>
+            <div className='inline-flex uppercase text-[18px] space-x-2 md:opacity-80 hover:opacity-100 transition duration-300 ease-in-out'>
+              <ArrowLeftIcon className="mr-2 mt-1 h-4 w-4" />
+              Back To All Projects
+            </div>
             </ClientSideRoute>
           </div>
         </article>
