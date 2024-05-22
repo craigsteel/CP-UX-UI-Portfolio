@@ -26,7 +26,7 @@ function Navbar() {
 	}, []);
 
 	return (
-		<nav style={{backgroundColor: `${color}`}} className="fixed left-0 top-0 w-full z-10 ease-in-out duration-300">
+		<nav style={{backgroundColor: `${color}`}} className="fixed left-0 top-0 w-full z-20 ease-in-out duration-300">
 			<div className="max-w-[1240px] m-auto flex justify-between p-4 text-white">
 
 				<ul style={{ color: `${textColor}` }} className="hidden sm:flex items-center ">

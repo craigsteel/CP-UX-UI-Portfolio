@@ -22,10 +22,10 @@ export default function NavbarMobile () {
   return (
     <>
       <header className={navbar ? 'navbar active' : 'active'}>
-        <nav className='max-w-[1720px] max-auto h-[60px] md:h-[80px] flex justify-between items-center py-2 md:py-8 px-5 md:px-24'>
+        <nav className='max-w-[1720px] z-10 max-auto h-[60px] md:h-[80px] flex justify-between items-center py-2 md:py-8 px-5 md:px-24'>
           <div>
             <Link href='/' onClick={handleSmallerScreensNavigation}>
-              <span className='text-[16px] md:text-1xl md:opacity-70 ease-in-out duration-300 hover:opacity-100'>Craig Parfitt UI/UX Designer</span>
+              <span className='text-[16px] z-10 md:text-1xl md:opacity-70 ease-in-out duration-300 hover:opacity-100'>Craig Parfitt UI/UX Designer</span>
             </Link>
           </div>
 
@@ -47,11 +47,11 @@ export default function NavbarMobile () {
               </Link>
             </li>
             <li className='navLink md:text-1xl'>
-              <Link href="mailto:craig@craigparfitt.com"
+              <a href="mailto:craig@craigparfitt.com"
                 target="_blank"
                 rel="noopener noreferrer">
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
 
@@ -89,11 +89,11 @@ export default function NavbarMobile () {
                   </Link>
                 </li>
                 <li onClick={ handleSmallerScreensNavigation } className='py-10 font-bold text-2xl text-center  hover:text-white cursor-pointer'>
-                  <Link href="mailto:craig@craigparfitt.com"
+                  <a href="mailto:craig@craigparfitt.com"
                     target="_blank"
                     rel="noopener noreferrer">
                     Contact
-                  </Link>
+                  </a>
                 </li>
               </ul>
 

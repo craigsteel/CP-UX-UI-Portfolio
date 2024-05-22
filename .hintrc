@@ -12,16 +12,13 @@
         ]
       }
     ],
-<<<<<<< HEAD
-    "axe/structure": [
+    "axe/forms": "off",
+    "axe/name-role-value": [
       "default",
       {
-        "listitem": "off"
+        "link-name": "off"
       }
     ]
-=======
-    "axe/forms": "off"
->>>>>>> main
   },
   "browserslist": [
     "defaults",
