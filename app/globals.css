@@ -16,6 +16,56 @@
     box-sizing: border-box;
   }
 
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  .custom-text{
+    font-size: 5px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    display: none;
+
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: none;
+  }
+
+  /* .custom-cursor.hover {
+    @apply border border-blue-500 border-dashed;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+  }
+
+  .custom-cursor.hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: blue;
+  } */
+
     /* Hide scrollbar for Chrome, Safari and Opera */
   body::-webkit-scrollbar {
     display: none;
@@ -28,6 +78,7 @@
     /* font-family: 'Open Sans', sans-serif; */
     font-family: var(--font-open-sans);
     color: white;
+    cursor: none;
   }
 
   .navbar {

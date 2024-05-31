@@ -7,6 +7,8 @@ import styled from 'styled-components';
 import MuxPlayer from '@mux/mux-player-react';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 
+
+
 interface Props {
 	posts: Post[];
 }
@@ -26,12 +28,11 @@ function Featured({posts}:Props) {
     <div>
       {posts?.map((post) => (
         <div key={post._id}
-          className='relative flex flex-col md:flex-row my-6 md:my-14 md:mx-32 background-card'>
+          className='relative flex flex-col md:flex-row my-10 md:my-14 md:mx-32 background-card'>
 
           {post.categories?.map((category) => (
 
             <div key={category._id} className='flex w-full md:w-1/3 flex-col md:pr-8'>
-
               <h2 className='text-3xl pt-2 uppercase font-extralight'>
                 {category.title}
               </h2>
@@ -47,10 +48,8 @@ function Featured({posts}:Props) {
               <div className="text-[14px] font-light pb-4">
                 {category.role}
               </div>
-              <div className='md:text-[14px] uppercase'>
-              </div>
 
-              <div className='hidden md:flex items-center absolute bottom-8 opacity-70 hover:opacity-100 bg-slate-950 p-2 rounded-sm transition duration-500 ease-in-out'>
+              <div className='hidden md:flex border-1 border-slate-700 items-center absolute bottom-[-17px] px-4 py-2 rounded md:opacity-60 md:hover:opacity-100 bg-[#1a2b6d] transition duration-300 ease-in-out'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
                   <p className='text-sm flex uppercase'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4" />
                     </p>
@@ -70,7 +69,7 @@ function Featured({posts}:Props) {
                 </Image>
             </div>
 
-              <div className='md:flex w-full md:w-2/3 pb-8 rounded-2xl drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]'>
+              <div className='md:flex w-full md:w-2/3 rounded-2xl drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
                     <StyledWrapper>
                       <MuxPlayer
@@ -93,6 +92,7 @@ function Featured({posts}:Props) {
               </div>
 			      </div>
 		      ))}
+
 	    </div>
   )
 }

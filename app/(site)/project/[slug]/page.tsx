@@ -12,6 +12,7 @@ import { client } from '../../../../sanity/lib/client'
 import { urlFor } from '../../../../sanity/lib/image'
 import ClientSideRoute from "@/app/components/ClientSideRoute";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import Cursor from "@/app/components/CustomCursorTwo";
 
 interface Props {
 	params: {
@@ -48,7 +49,8 @@ async function Project({ params: { slug } }: Props) {
 	const post: Post = await client.fetch(query, { slug });
 
 	return (
-		<>
+    <>
+      <Cursor />
       <div className="">
 				<Image
 					src={urlFor(post.backgroundImage).url()}

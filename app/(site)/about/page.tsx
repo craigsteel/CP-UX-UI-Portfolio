@@ -3,9 +3,12 @@ import Journey from "@/app/components/Journey";
 import Skills from "@/app/components/Skills";
 import ToolsUsed from "@/app/components/ToolsUsed";
 import Workflow from "@/app/components/WorkFlow";
+import Cursor from "@/app/components/CustomCursorTwo";
 
 export default function About() {
   return (
+    <>
+          <Cursor />
     <div>
       <Hero
         heading='About Me'
@@ -22,6 +25,7 @@ For the past decade, I have seamlessly transitioned into the field of UX/UI desi
         <ToolsUsed />
         <Workflow />
       </main>
-    </div>
+      </div>
+    </>
   )
 }

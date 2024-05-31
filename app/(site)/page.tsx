@@ -2,6 +2,7 @@ import Hero from '../components/Hero'
 import Featured from '../components/Featured';
 import { groq } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
+import Cursor from '../components/CustomCursorTwo';
 
 export const revalidate = 60;
 
@@ -15,18 +16,21 @@ const query = groq`
   "playbackId": video.asset->playbackId,
   }`;
 
-export default async function Page() {
+export default async function Page({}) {
 
   const posts = await client.fetch(query);
+
   return (
     <>
+      <Cursor />
       <div>
         <Hero
           heading="Hi, thanks for visiting my portfolio that focuses on UI/UX Design."
           message="I'm a UK-based UI/UX designer with 20+ years of experience in branding, corporate, and UX/UI. My design passion has fuelled a diverse career. I honed leadership, presentation, and client-facing skills, collaborating with developers and managing budgets to deliver successful projects on tight deadlines. I help clients solve communication challenges and craft exceptional online experiences that users love."
-          subheading="Featured Projects" />
+          subheading="Featured Projects"
+          />
       </div>
-      <Featured posts={posts} />
+        <Featured posts={posts} />
     </>
   )
 }

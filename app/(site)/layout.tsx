@@ -4,6 +4,7 @@ import FooterMain from '../components/FooterMain';
 import dynamic from 'next/dynamic';
 import { Open_Sans } from 'next/font/google'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Cursor from './../components/CustomCursorTwo'
 
 // If loading a variable font, you don't need to specify the font weight
 const open_sans = Open_Sans({
@@ -19,7 +20,6 @@ export const metadata: Metadata = {
   }
 }
 
-
 const DynamicNavbarMobile = dynamic(() => import('../components/NavbarMobile'),
   {
     ssr: false,
@@ -29,13 +29,15 @@ export default function RootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${open_sans.variable} font-sans !scroll-smooth`} >
-      <body>
+    <>
+      <html lang="en" className={`${open_sans.variable} font-sans !scroll-smooth`}>
+        <body>
         <DynamicNavbarMobile />
         {children}
         <SpeedInsights />
         <FooterMain />
       </body>
-    </html>
+      </html>
+    </>
   )
 }
