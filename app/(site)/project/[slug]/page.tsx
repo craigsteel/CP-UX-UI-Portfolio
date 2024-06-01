@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 
-import Hero from "@/app/components/Hero";
-
 import { PortableText } from "@portabletext/react";
 import groq from "groq";
 import Image from 'next/image';

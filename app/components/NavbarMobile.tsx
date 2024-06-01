@@ -66,13 +66,13 @@ export default function NavbarMobile () {
 
           {/* Smaller screen Navbar */ }
           <div className={ menuIcon ?
-            'md:hidden absolute top-[40px] right-0 left-0 flex justify-center items-center w-full h-screen bg-slate-950 text-white ease-in-out duration-300'
+            'md:hidden z-9999 absolute top-[40px] right-0 left-0 flex justify-center items-center w-full h-screen bg-slate-950 text-white ease-in-out duration-300'
             :
-            'md:hidden absolute top-[40px] right-0 left-[-100%] flex justify-center items-center w-full h-screen bg-slate-950 text-white text-center ease-in-out duration-300'
+            'md:hidden z-9999 absolute top-[40px] right-0 left-[-100%] flex justify-center items-center w-full h-screen bg-slate-950 text-white text-center ease-in-out duration-300'
           }>
             <div className='w-full'>
 
-              <ul className='text-2xl'>
+              <ul className='text-2xl -mt-20'>
                 <li onClick={ handleSmallerScreensNavigation } className='py-10 font-bold text-2xl text-center hover:text-white cursor-pointer'>
                   <Link href='/'>
                     Home
