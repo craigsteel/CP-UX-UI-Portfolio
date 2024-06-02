@@ -96,7 +96,7 @@ export default function Journey() {
 
           <div className="absolute bottom-5 text-white right-10 px-3 py-2 rounded-md uppercase text-sm font-thin bg-slate-800 opacity-100 hover:opacity-100 transition duration-300 ease-in">
             <a
-              href="/Craig Parfitt-UI-UX-CV 2024.pdf"
+              href="/Craig Parfitt UI/UX CV 2024.pdf"
               target="_blank"
               download>
               Download My CV{" "}
