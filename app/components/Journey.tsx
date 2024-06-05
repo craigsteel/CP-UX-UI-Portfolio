@@ -42,7 +42,7 @@ export default function Journey() {
 
           <div className=''>
             <h4 className="text-[16px] pt-0">ECHO WEB SOLUTIONS</h4>
-            <p className="font-medium text-[14px]">UI UX SENIOR DESIGNER - 2021-23</p>
+            <p className="font-medium text-[14px]">SENIOR UI/UX DESIGNER - 2021-23</p>
             <div className="font-light text-[14px]">
               <ul className="list-disc">
                 {echostart.map((echostart, index) =>
@@ -59,7 +59,7 @@ export default function Journey() {
           </div>
           <div className=''>
             <h4 className="text-[16px] pt-0">CRAIG STEEL DESIGN</h4>
-            <p className="font-medium text-[14px] uppercase">UI/UX Senior Designer - 2013-2021</p>
+            <p className="font-medium text-[14px] uppercase">Senior UI/UX Designer - 2013-2021</p>
             <div className="font-light text-[14px]">
               <ul className="list-disc">
                 {csdstart.map((csdstart, index) =>
@@ -96,7 +96,7 @@ export default function Journey() {
 
           <div className="absolute bottom-5 text-white right-10 px-3 py-2 rounded-md uppercase text-sm font-thin bg-slate-800 opacity-100 hover:opacity-100 transition duration-300 ease-in">
             <a
-              href="/Craig Parfitt UI/UX CV 2024.pdf"
+              href="/Craig Parfitt UI-UX CV 2024.pdf"
               target="_blank"
               download>
               Download My CV{" "}
