@@ -55,8 +55,8 @@ async function Project({ params: { slug } }: Props) {
 					alt={post.title}
 					fill={true}
 					quality={100}
-          className="aspect-ratio relative z-[-10] w-screen opacity-30 blur-sm"
-				/>
+          className="aspect-ratio relative z-[-10] w-screen opacity-30 blur-sm">
+        </Image>
 			</div>
 
         <article>
@@ -86,7 +86,6 @@ async function Project({ params: { slug } }: Props) {
               <div className="z-30 bg-white text-black">
                 <PortableText value={post.body} components={RichTextComponents} />
               </div>
-
             </div>
           </section>
 
