@@ -2,7 +2,7 @@
 export default function Journey() {
 
   const echostart = [
-    'Led UI/UX projects from concept to launch, ensuring seamless user experiences.',
+    'Led UX / UI projects from concept to launch, ensuring seamless user experiences.',
     'Translated client goals into intuitive designs through workshops, interviews, and user testing.',
     'Collaborated with developers for flawless implementation.',
   ];
@@ -13,7 +13,7 @@ export default function Journey() {
     'Project managed and designed Echo Web Solutions brand, guidelines, webpages, and signage.',
   ];
   const csdstart = [
-    'Founded my own design agency specialising in branding and UI/UX projects for diverse clients: e-commerce, businesses, and SaaS companies (UK & International).',
+    'Founded my own design agency specialising in branding and UX / UI projects for diverse clients: e-commerce, businesses, and SaaS companies (UK & International).',
   ];
   const csd = [
     'Won a pitch for branding and web application for Strauss Logistics (fuel distribution leader, Central & Southern Africa)',
@@ -42,7 +42,7 @@ export default function Journey() {
 
           <div className=''>
             <h4 className="text-[16px] pt-0">ECHO WEB SOLUTIONS</h4>
-            <p className="font-medium text-[14px]">SENIOR UI/UX DESIGNER - 2021-23</p>
+            <p className="font-medium text-[14px]">SENIOR UX / UI DESIGNER - 2021-23</p>
             <div className="font-light text-[14px]">
               <ul className="list-disc">
                 {echostart.map((echostart, index) =>
@@ -59,7 +59,7 @@ export default function Journey() {
           </div>
           <div className=''>
             <h4 className="text-[16px] pt-0">CRAIG STEEL DESIGN</h4>
-            <p className="font-medium text-[14px] uppercase">Senior UI/UX Designer - 2013-2021</p>
+            <p className="font-medium text-[14px] uppercase">Senior UX / UI Designer - 2013-2021</p>
             <div className="font-light text-[14px]">
               <ul className="list-disc">
                 {csdstart.map((csdstart, index) =>

@@ -1,8 +1,8 @@
 type HeroProps = {
-	heading: string;
-	message: string;
-	subheading: string;
-}
+  heading: string;
+  message: string;
+  subheading: string;
+};
 export default function Hero(props: HeroProps) {
 	const { heading, message, subheading } = props;
 

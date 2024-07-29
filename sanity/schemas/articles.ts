@@ -4,12 +4,11 @@ export default {
     type: 'document',
     title: "News Articles",
     fields: [
-
       {
           name: 'title',
           type: 'string',
           title: 'Article Title',
-          validation: (Rule: { required: () => any; }) => Rule.required()
+          validation: (Rule: { required: () => any; }) => Rule.required(),
       },
       {
           name: 'slug',
@@ -22,7 +21,7 @@ export default {
                 // Custom slugify function to properly format the slug as a URL path.
                 const newSlug = input.toLowerCase().replace(/\s+/g, '-');
                 return `/${newSlug}`;
-              }
+              },
           },
           validation: (Rule: { required: () => any; }) => Rule.required()
       },
@@ -31,7 +30,7 @@ export default {
           type: 'array',
           title: "Main Text",
           of: [{
-              type: 'block' ,
+              type: 'block',
               // The marks declaration below adds an additional option to the Sanity text editor.
               // This option will allow us to attach files to highlighted pieces of text.
               marks: {
@@ -47,7 +46,7 @@ export default {
                       // Notice the the type here is 'file'.
                       // In the unsuccessful approach, it was originally 'reference'
                       type: 'file',
-                      title: 'File Attachment'
+                      title: 'File Attachment',
                   }]
                 }]
               }

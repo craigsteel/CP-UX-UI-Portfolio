@@ -25,7 +25,7 @@ export default function NavbarMobile () {
         <nav className='max-w-[1720px] z-10 max-auto h-[60px] md:h-[80px] flex justify-between items-center py-2 md:py-8 px-5 md:px-24'>
           <div>
             <Link href='/' onClick={handleSmallerScreensNavigation}>
-              <span className='text-[16px] z-10 md:text-1xl md:opacity-70 ease-in-out duration-300 hover:opacity-100'>Craig Parfitt UI/UX Designer</span>
+              <span className='text-[16px] z-10 md:text-1xl md:opacity-70 ease-in-out duration-300 hover:opacity-100'>Craig Parfitt UX / UI Designer</span>
             </Link>
           </div>
 

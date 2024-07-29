@@ -6,14 +6,9 @@ import ClientSideRoute from './ClientSideRoute';
 import styled from 'styled-components';
 import MuxPlayer from '@mux/mux-player-react';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
-
-
-
-interface Props {
+type Props = {
 	posts: Post[];
 }
-
-export const revalidate = 60;
 
 const StyledWrapper = styled.div`
   aspect-ratio: 16 / 9;
@@ -43,7 +38,7 @@ function Featured({posts}:Props) {
                 {category.description}
               </div>
               <div className='md:text-[14px] uppercase'>
-                Role
+                My Role
               </div>
               <div className="text-[14px] font-light pb-4">
                 {category.role}
@@ -65,8 +60,9 @@ function Featured({posts}:Props) {
                   width={190}
                   height={393}
                   quality={100}
-                  className="object-cover w-32 md:w-48 rounded-lg drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]">
-                </Image>
+                  className="object-cover rounded-lg drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]">
+            </Image>
+
             </div>
 
               <div className='md:flex w-full md:w-2/3 rounded-2xl drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]'>

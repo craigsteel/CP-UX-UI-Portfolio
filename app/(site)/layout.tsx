@@ -16,9 +16,15 @@ const open_sans = Open_Sans({
 export const metadata: Metadata = {
   title: 'Craig Parfitt UI/UX Designer',
   description: 'Craig Parfitt UI/UX Portfolio',
+}
+export const viewport = {
+  themeColor: 'bg-slate-950',
+  viewport: {
+    width: 1,
+  },
   verification: {
     google: 'rOQryTT28MDXzXvLfrJjWTa3GX16RkyJqPhFJEkVis0',
-  }
+  },
 }
 
 const DynamicNavbarMobile = dynamic(() => import('../components/NavbarMobile'),
@@ -27,9 +33,9 @@ const DynamicNavbarMobile = dynamic(() => import('../components/NavbarMobile'),
   })
 
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode;
 }) {
   return (
     <Fragment>

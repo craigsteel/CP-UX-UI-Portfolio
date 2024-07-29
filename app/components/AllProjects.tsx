@@ -7,8 +7,8 @@ import ClientSideRoute from './ClientSideRoute';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { Fragment } from 'react';
 
-interface Props {
-	posts: Post[];
+type Props = {
+  posts: Post[];
 }
 
 function AllProjects({ posts }: Props) {

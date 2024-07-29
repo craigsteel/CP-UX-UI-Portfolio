@@ -4,6 +4,13 @@ import { client } from '../../../../sanity/lib/client'
 import AllProjects from '@/app/components/AllProjects'
 import Cursor from '@/app/components/CustomCursorTwo';
 import { Fragment } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Projects',
+  },
+}
 const query = groq`
   *[_type == "post"] | order(number, desc){
   ...,
@@ -23,7 +30,7 @@ export default async function Projects() {
       <Cursor />
 
         <Hero
-          heading='UI/UX Projects'
+          heading='UX / UI Projects'
           message='A selection of completed e-commerce, and business Website that generate business leads and increase conversions.'
           subheading=''>
         </Hero>

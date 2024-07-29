@@ -11,8 +11,15 @@ import { urlFor } from '../../../../sanity/lib/image'
 import ClientSideRoute from "@/app/components/ClientSideRoute";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import Cursor from "@/app/components/CustomCursorTwo";
+import { Metadata } from "next";
 
-interface Props {
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Project',
+  },
+}
+
+type Props = {
 	params: {
 		slug: string;
 	},
