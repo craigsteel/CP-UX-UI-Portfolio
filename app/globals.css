@@ -56,23 +56,27 @@
     scrollbar-width: none;  /* Firefox */
     /* font-family: 'Open Sans', sans-serif; */
     font-family: var(--font-open-sans);
-    color: white;
+    color: black;
     cursor: none;
   }
 
   .navbar {
-    @apply md:bg-slate-950/0 text-white w-full ease-in duration-300 sticky top-0 left-0 z-20;
+    /* @apply md:bg-slate-950/0 text-white w-full ease-in duration-300 sticky top-0 left-0 z-20; */
+    @apply md:bg-white text-black w-full ease-in duration-300 sticky top-0 left-0 z-20;
+
   }
   .navbar.active {
-    @apply bg-slate-950;
+    /* @apply bg-slate-950; */
+    @apply bg-white;
   }
 
   body {
-    @apply bg-gradient-to-tr from-slate-950 from-40% via-blue-950 via-60% to-slate-950;
+    /* @apply bg-gradient-to-tr from-slate-950 from-40% via-blue-950 via-60% to-slate-950; */
+    @apply bg-white
   }
 
   p {
-    @apply text-[22px] md:text-[16px];
+    @apply text-xl md:text-lg;
     @apply font-light;
     @apply subpixel-antialiased;
   }
@@ -97,7 +101,9 @@
   }
 
   .background-card {
-    @apply relative md:hover:border-[0.5px] border-blue-950 rounded-lg p-5 bg-gradient-to-tr from-cardblue-950 from-5% via-blue-950 via-80% to-cardblue-950 md:opacity-50 md:hover:opacity-100 md:hover:drop-shadow-1xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out;
+    /* @apply relative md:hover:border-[0.5px] border-blue-950 rounded-lg p-5 bg-gradient-to-tr from-cardblue-950 from-5% via-blue-950 via-80% to-cardblue-950 md:opacity-50 md:hover:opacity-100 md:hover:drop-shadow-1xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out; */
+    @apply relative border-[0.5px] border-neutral-200 md:hover:border-[0.5px] rounded-lg p-5 bg-white md:opacity-85 md:hover:opacity-100 md:hover:drop-shadow-2xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out;
+
   }
 
   .flexCenter {
@@ -114,7 +120,7 @@
 
   li {
     @apply font-light;
-    @apply text-[14px];
+    @apply text-sm;
   }
 
   blockquote {
@@ -130,7 +136,7 @@
   }
 
   .projectButton {
-    @apply flex items-center w-fit py-2 px-4 rounded md:opacity-60 md:hover:opacity-100 bg-slate-950/40 md:hover:bg-slate-950/80 transition duration-300 ease-in-out;
+    @apply flex items-center border-[0.5px] px-4 border-neutral-200 md:hover:border-[0.5px] rounded-lg text-black md:hover:text-white text-sm w-fit py-2 px-4  bg-white md:hover:bg-slate-950 transition duration-300 ease-in-out;
   }
 
   .navLink {

@@ -2,9 +2,9 @@ import Hero from '@/app/components/Hero'
 import { groq } from 'next-sanity'
 import { client } from '../../../../sanity/lib/client'
 import AllProjects from '@/app/components/AllProjects'
-import Cursor from '@/app/components/CustomCursorTwo';
 import { Fragment } from 'react';
 import { Metadata } from 'next';
+import Cursor from '@/app/components/CustomCursorTwo';
 
 export const metadata: Metadata = {
   title: {
@@ -28,7 +28,6 @@ export default async function Projects() {
   return (
     <Fragment>
       <Cursor />
-
         <Hero
           heading='UX / UI Projects'
           message='A selection of completed e-commerce, and business Website that generate business leads and increase conversions.'

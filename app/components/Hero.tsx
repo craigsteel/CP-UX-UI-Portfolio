@@ -7,7 +7,7 @@ export default function Hero(props: HeroProps) {
 	const { heading, message, subheading } = props;
 
 	return (
-    <div className='md:mb-8 mx-5 mt-4 md:mx-28 z-0 md:w-3/4'>
+    <section className='mx-5 mt-4 md:mx-28 z-0 md:w-3/4'>
 
       <h1 className='pb-4 leading-[3.4rem] md:leading-[4.6rem]'>
 				{heading}
@@ -17,11 +17,11 @@ export default function Hero(props: HeroProps) {
 				{message}
       </p>
 
-      <hr className="border-[0.5px] border-gray-700 my-6"></hr>
+      <hr className="border-[0.5px] border-gray-700 opacity-20 my-6"></hr>
 
-			<h2 className='font-light text-gray-400 mt-4 text-xl'>
+			<h2 className='font-light pt-8 pl-10 uppercase text-lg'>
 				{subheading}
 			</h2>
-    </div>
+    </section>
   )
 }

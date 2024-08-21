@@ -14,7 +14,9 @@ const StyledWrapper = styled.div`
   aspect-ratio: 16 / 9;
   border-radius: 6px; // Adjust as needed
   overflow: hidden; // Optional to prevent content overflow
-  background-color: #010b2c;
+  background-color: #ffffff;
+  width: 753px;
+  height: 426px;
 `;
 
 function Featured({posts}:Props) {
@@ -31,20 +33,20 @@ function Featured({posts}:Props) {
               <h2 className='text-3xl pt-2 uppercase font-extralight'>
                 {category.title}
               </h2>
-              <div className="text-[14px] font-normal pb-2">
+              <div className="text-sm font-normal pb-2">
                 {category.sector}
               </div>
-              <div className="text-[14px] font-extralight mb-4 line-clamp-3 md:line-clamp-4 lg:line-clamp-8 leading-6">
+              <div className="text-sm font-extralight mb-4 line-clamp-3 md:line-clamp-4 lg:line-clamp-8 leading-6">
                 {category.description}
               </div>
-              <div className='md:text-[14px] uppercase'>
+              <div className='md:text-sm uppercase'>
                 My Role
               </div>
-              <div className="text-[14px] font-light pb-4">
+              <div className="text-sm font-light pb-4">
                 {category.role}
               </div>
 
-              <div className='hidden md:flex border-1 border-slate-700 items-center absolute bottom-[-17px] px-4 py-2 rounded md:opacity-60 md:hover:opacity-100 bg-[#1a2b6d] transition duration-300 ease-in-out'>
+              <div className='projectButton hidden md:flex absolute bottom-[20px] py-2'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
                   <p className='text-sm flex uppercase'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4" />
                     </p>
@@ -60,12 +62,12 @@ function Featured({posts}:Props) {
                   width={190}
                   height={393}
                   quality={100}
-                  className="object-cover rounded-lg drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]">
+                  className="object-cover rounded-lg drop-shadow-[0px_0px_10px_rgba(0,0,0,0.3)]">
             </Image>
 
             </div>
 
-              <div className='md:flex w-full md:w-2/3 rounded-2xl drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)]'>
+              <div className='md:flex w-full md:w-2/3 drop-shadow-[0px_0px_10px_rgba(0,0,0,0.1)]'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
                     <StyledWrapper>
                       <MuxPlayer
@@ -75,7 +77,7 @@ function Featured({posts}:Props) {
                         loop
                         muted
                         autoPlay="muted"
-                        className="drop-shadow-[0px_0px_10px_rgba(0,0,0,0.5)] bg-cardblue">
+                        >
                       </MuxPlayer>
                   </StyledWrapper>
                 </ClientSideRoute>
@@ -83,7 +85,7 @@ function Featured({posts}:Props) {
 
               <div className='projectButton md:hidden'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
-                  <p className='text-sm inline-flex'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4"></ArrowUpRightIcon></p>
+              <p className='inline-flex'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4"></ArrowUpRightIcon></p>
                 </ClientSideRoute>
               </div>
 			      </div>

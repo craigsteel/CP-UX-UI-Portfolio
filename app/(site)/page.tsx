@@ -3,6 +3,7 @@ import Featured from '../components/Featured';
 import { groq } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
 import Cursor from '../components/CustomCursorTwo';
+import { Fragment } from 'react';
 
 export const revalidate = 60;
 
@@ -21,7 +22,7 @@ export default async function Page({}) {
   const posts = await client.fetch(query);
 
   return (
-    <>
+    <Fragment>
       <Cursor />
       <div>
         <Hero
@@ -31,6 +32,6 @@ export default async function Page({}) {
           />
       </div>
         <Featured posts={posts} />
-    </>
+    </Fragment>
   )
 }
