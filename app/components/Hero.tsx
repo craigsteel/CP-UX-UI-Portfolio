@@ -19,7 +19,7 @@ export default function Hero(props: HeroProps) {
 
       <hr className="border-[0.5px] border-gray-700 opacity-20 my-6"></hr>
 
-			<h2 className='font-light pt-8 pl-10 uppercase text-lg'>
+			<h2 className='font-light md:pt-8 md:pl-10 uppercase text-lg'>
 				{subheading}
 			</h2>
     </section>

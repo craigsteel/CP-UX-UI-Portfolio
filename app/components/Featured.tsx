@@ -15,17 +15,15 @@ const StyledWrapper = styled.div`
   border-radius: 6px; // Adjust as needed
   overflow: hidden; // Optional to prevent content overflow
   background-color: #ffffff;
-  width: 753px;
-  height: 426px;
 `;
 
 function Featured({posts}:Props) {
   return (
 
-    <div>
+    <section className="mx-6 md:mx-0 ">
       {posts?.map((post) => (
         <div key={post._id}
-          className='relative flex flex-col md:flex-row my-10 md:my-14 md:mx-32 background-card'>
+          className='relative flex flex-col md:flex-row mb-8 md:mb-0 md:my-10 md:my-14 md:mx-32 background-card'>
 
           {post.categories?.map((category) => (
 
@@ -55,19 +53,19 @@ function Featured({posts}:Props) {
             </div>
           ))}
 
-            <div className='flex bottom-[-17px] right-[30px] md:right-[-40px] absolute z-10'>
+            <div className='flex bottom-[-25px] md:bottom-[-17px] right-[-10px] md:right-[-14px] absolute z-10'>
                 <Image
                   src={urlFor(post.mobileImage).url()}
                   alt={post.title}
-                  width={190}
-                  height={393}
+                  width={155}
+                  height={325}
                   quality={100}
-                  className="object-cover rounded-lg drop-shadow-[0px_0px_10px_rgba(0,0,0,0.3)]">
+                  className="object-cover md:w-52 h-auto rounded-lg drop-shadow-[0px_0px_10px_rgba(0,0,0,0.3)]">
             </Image>
 
             </div>
 
-              <div className='md:flex w-full md:w-2/3 drop-shadow-[0px_0px_10px_rgba(0,0,0,0.1)]'>
+          <div className='flex w-full md:w-[753px] md:h-[426px] drop-shadow-[0px_0px_10px_rgba(0,0,0,0.1)]'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
                     <StyledWrapper>
                       <MuxPlayer
@@ -85,13 +83,13 @@ function Featured({posts}:Props) {
 
               <div className='projectButton md:hidden'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
-              <p className='inline-flex'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4"></ArrowUpRightIcon></p>
+              <p className='inline-flex text-base uppercase'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4"></ArrowUpRightIcon></p>
                 </ClientSideRoute>
               </div>
 			      </div>
 		      ))}
 
-	    </div>
+	    </section>
   )
 }
 

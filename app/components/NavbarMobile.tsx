@@ -58,17 +58,17 @@ export default function NavbarMobile () {
           {/* smaller screens */ }
           <div onClick={ handleSmallerScreensNavigation } className='flex md:hidden'>
             { menuIcon ?
-              ( <AiOutlineClose size={ 25 } className='text-white' /> )
+              ( <AiOutlineClose size={ 25 } className='text-black' /> )
               :
-              ( <AiOutlineMenu size={25} className='text-white' /> )
+              ( <AiOutlineMenu size={25} className='text-black' /> )
           }
           </div>
 
           {/* Smaller screen Navbar */ }
           <div className={ menuIcon ?
-            'md:hidden z-9999 absolute top-[40px] right-0 left-0 flex justify-center items-center w-full h-screen bg-slate-950 text-white ease-in-out duration-300'
+            'md:hidden z-50 absolute top-[60px] right-0 left-0 flex justify-center items-center w-full h-screen bg-slate-950 text-white ease-in-out duration-300'
             :
-            'md:hidden z-9999 absolute top-[40px] right-0 left-[-100%] flex justify-center items-center w-full h-screen bg-slate-950 text-white text-center ease-in-out duration-300'
+            'md:hidden z-50 absolute top-[60px] right-0 left-[-100%] flex justify-center items-center w-full h-screen bg-slate-950 text-white text-center ease-in-out duration-300'
           }>
             <div className='w-full'>
 

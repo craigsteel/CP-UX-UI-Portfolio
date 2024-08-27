@@ -14,7 +14,7 @@ type Props = {
 function AllProjects({ posts }: Props) {
   return (
 
-    <div className="grid z-2 gap-6 md:gap-10 md:grid-cols-2">
+    <div className="grid mx-5 z-2 gap-6 md:gap-10 md:grid-cols-2">
 		  {posts?.map(post => (
         <div key={post._id} className='background-card'>
 
@@ -41,22 +41,24 @@ function AllProjects({ posts }: Props) {
                   </Image>
                 </ClientSideRoute>
               </div>
-              <div className="pb-12 pt-4">
-                <div key={category._id} className='text-[14px] font-light leading-normal'>
+              <div className="pb-4 md:pb-12 pt-4">
+                <div key={category._id} className='mb-5 text-base md:text-[14px] font-light leading-normal'>
                   {category.description}
                 </div>
               </div>
-              <div className="absolute bottom-5 left-5 rounded">
+              <div className="absolute bottom-5 left-5 pb-6 rounded">
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
                   <div className='text-sm inline-flex uppercase text-[12px] space-x-2 md:opacity-50 hover:opacity-100 transition duration-300 ease-in-out'>
                     Read the full story<ArrowRightIcon className="ml-2 mt-1 h-4 w-4" />
                   </div>
                 </ClientSideRoute>
               </div>
+              <hr className="border-[0.5px] border-gray-700 opacity-20 my-6"></hr>
             </Fragment>
 
           ))}
-			  </div>
+        </div>
+
       ))}
     </div>
 

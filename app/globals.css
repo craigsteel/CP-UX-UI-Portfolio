@@ -102,7 +102,7 @@
 
   .background-card {
     /* @apply relative md:hover:border-[0.5px] border-blue-950 rounded-lg p-5 bg-gradient-to-tr from-cardblue-950 from-5% via-blue-950 via-80% to-cardblue-950 md:opacity-50 md:hover:opacity-100 md:hover:drop-shadow-1xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out; */
-    @apply relative border-[0.5px] border-neutral-200 md:hover:border-[0.5px] rounded-lg p-5 bg-white md:opacity-85 md:hover:opacity-100 md:hover:drop-shadow-2xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out;
+    @apply relative md:border-[0.5px] border-neutral-200 md:hover:border-[0.5px] rounded-lg md:p-5 bg-white md:opacity-85 md:hover:opacity-100 md:hover:drop-shadow-2xl md:hover:scale-105 md:transition md:duration-500 md:ease-in-out;
 
   }
 
@@ -136,7 +136,7 @@
   }
 
   .projectButton {
-    @apply flex items-center border-[0.5px] px-4 border-neutral-200 md:hover:border-[0.5px] rounded-lg text-black md:hover:text-white text-sm w-fit py-2 px-4  bg-white md:hover:bg-slate-950 transition duration-300 ease-in-out;
+    @apply flex items-center mt-5 border-[0.5px] px-4 border-neutral-200 md:hover:border-[0.5px] rounded-lg text-black md:hover:text-white text-sm w-fit py-2 px-4  bg-white md:hover:bg-slate-950 transition duration-300 ease-in-out;
   }
 
   .navLink {

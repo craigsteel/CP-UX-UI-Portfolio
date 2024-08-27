@@ -35,66 +35,66 @@ export default function Journey() {
   return (
     <section>
       <div className='md:my-16 md:mx-16 relative z-0 background-card'>
-        <h2 className="grid pl-5 md:pl-10 pt-5 text-4xl uppercase font-light text-slate-950">
+        <h2 className="grid pl-5 md:pl-10 md:pt-5 text-4xl uppercase font-light text-slate-950">
           MY JOURNEY
         </h2>
         <div className='md:px-12 pl-5 pt-5 pb-12 text-slate-950 grid md:grid-cols-3 md:gap-6 lg:grid-cols-3 lg:gap-6'>
 
-          <div className=''>
+          <div className='pb-4'>
             <h4 className="text-base pt-0">ECHO WEB SOLUTIONS</h4>
-            <p className="font-medium text-sm pb-2">SENIOR UX / UI DESIGNER - 2021-23</p>
-            <div className="font-light text-sm">
+            <p className="font-medium text-base pb-2">SENIOR UX / UI DESIGNER - 2021-23</p>
+            <div className="font-light text-base">
               <ul className="list-disc">
                 {echostart.map((echostart, index) =>
-                  (<li key={index} >{ echostart }</li>))}
+                  (<li className="text-base" key={index} >{ echostart }</li>))}
               </ul>
             </div>
-            <p className="font-medium text-sm">
+            <p className="font-medium text-base">
             Impact:
             </p>
             <ul className="list-disc">
               { echo.map((echo, index) =>
-                (<li key={index} >{ echo }</li>))}
+              (<li className="text-base" key={index} >{ echo }</li>))}
             </ul>
           </div>
-          <div className=''>
+          <div className='pb-4'>
             <h4 className="text-base pt-0">CRAIG STEEL DESIGN</h4>
-            <p className="font-medium text-sm uppercase pb-2">Senior UX / UI Designer - 2013-2021</p>
-            <div className="font-light text-sm">
+            <p className="font-medium text-base uppercase pb-2">Senior UX / UI Designer - 2013-2021</p>
+            <div className="font-light text-base">
               <ul className="list-disc">
                 {csdstart.map((csdstart, index) =>
-                  (<li key={index} >{csdstart}</li>))}
+                  (<li className="text-base" key={index} >{csdstart}</li>))}
               </ul>
-              <p className="font-medium text-sm">
+              <p className="font-medium text-base">
                 Impact:
               </p>
             </div>
             <ul className="list-disc">
               {csd.map((csd, index) =>
-                (<li key={index}>{csd}</li>)
+                (<li className="text-base" key={index}>{csd}</li>)
               )}
             </ul>
           </div>
-          <div className='pb-12'>
+          <div className='pb-8 md:pb-12'>
             <h4 className="text-base pt-0">CAIRNES DESIGN</h4>
-            <p className="font-medium text-sm uppercase pb-2">Senior Designer - 1994-2013</p>
-            <div className="font-light text-sm">
+            <p className="font-medium text-base uppercase pb-2">Senior Designer - 1994-2013</p>
+            <div className="font-light text-base">
               <ul className="list-disc">
                 {cairnesstart.map((cairnesstart, index) =>
-                  (<li key={index} >{cairnesstart}</li>))}
+                  (<li className="text-base" key={index} >{cairnesstart}</li>))}
               </ul>
             </div>
-            <p className="font-medium text-sm">
+            <p className="font-medium text-base">
               Impact:
             </p>
             <ul className="list-disc">
               {cairnes.map((cairnes, index) =>
-                (<li key={index}>{cairnes}</li>)
+                (<li className="text-base" key={index}>{cairnes}</li>)
               )}
             </ul>
           </div>
 
-          <div className="absolute bottom-5 text-white right-10 px-3 py-2 rounded-md uppercase text-sm font-thin bg-slate-800 opacity-100 hover:opacity-100 transition duration-300 ease-in">
+          <div className="absolute bottom-5 text-white right-10 px-3 py-2 rounded-md uppercase text-base font-thin bg-slate-800 opacity-100 hover:opacity-100 transition duration-300 ease-in">
             <a
               href="/Craig Parfitt UI-UX CV 2024.pdf"
               target="_blank"

@@ -23,7 +23,7 @@ export default function About() {
           For the past decade, I have seamlessly transitioned into the field of UX / UI design and development. I specialise in the creation of intuitive and user-centric experiences for e-commerce, corporate, and SaaS web applications."
           subheading=''>
         </Hero>
-        <main className="mx-5 md:mx-10 mt-10">
+        <main className="mx-5 md:mx-10 md:mt-10">
           <Journey />
           <Skills />
           <ToolsUsed />
