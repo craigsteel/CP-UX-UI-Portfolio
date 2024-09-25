@@ -79,7 +79,7 @@ async function Project({ params: { slug } }: Props) {
                 </div>
               </header>
 
-              <div className="mt-5">
+              <div className="hidden md:block md:mt-5 mt-4">
                 <Image
                   src={urlFor(post.mainImageProject).url()}
                   alt={post.title}
@@ -88,10 +88,25 @@ async function Project({ params: { slug } }: Props) {
                   quality={100}
                   className="rounded-t-lg md:w-full mx-auto"
                 />
+            </div>
+
+            <div className="block md:hidden mt-5">
+              <Image
+                src={urlFor(post.mainImageProjectMobile).url()}
+                alt={post.title}
+                width={1150}
+                height={608}
+                quality={100}
+                className="rounded-t-lg md:w-full mx-auto"
+              />
+            </div>
+
+              <div className="hidden md:block z-30 bg-white text-black">
+                <PortableText value={post.body} components={RichTextComponents} />
               </div>
 
-              <div className="z-30 bg-white text-black">
-                <PortableText value={post.body} components={RichTextComponents} />
+              <div className="block md:hidden z-30 bg-white text-black">
+                <PortableText value={post.bodyMobile} components={RichTextComponents} />
               </div>
             </div>
           </section>

@@ -66,6 +66,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: "mainImageProjectMobile",
+      title: "Main image Project page Mobile",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: "mobileImage",
       title: "Mobile image",
       type: "image",
@@ -77,7 +85,7 @@ export default defineType({
       name: "categories",
       title: "Categories",
       type: "array",
-      of: [{type: "reference", to: {type: "category"} }],
+      of: [{ type: "reference", to: { type: "category" } }],
     }),
     defineField({
       name: "publishedAt",
@@ -87,6 +95,11 @@ export default defineType({
     defineField({
       name: "body",
       title: "Body",
+      type: "blockContent",
+    }),
+    defineField({
+      name: "bodyMobile",
+      title: "Body Mobile",
       type: "blockContent",
     }),
   ],

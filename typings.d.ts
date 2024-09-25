@@ -16,6 +16,7 @@ interface Post extends Base {
   backgroundImage: Image;
   mainImage: Image;
   mainImageProject: Image;
+  mainImageProjectMobile: Image;
   image: Image;
   public_id: string;
   resource_type: string;
@@ -27,6 +28,7 @@ interface Post extends Base {
   mobileImage: Image;
   slug: Slug;
   body: PortableTextBlock[];
+  bodyMobile: PortableTextBlock[];
   content: PortableTextBlock[];
   description: PortableTextBlock[];
   overview?: PortableTextBlock[];
