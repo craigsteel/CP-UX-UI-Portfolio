@@ -48,7 +48,7 @@ function AllProjects({ posts }: Props) {
               </div>
               <div className="absolute bottom-5 left-5 pb-6 rounded">
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
-                  <div className='text-sm inline-flex uppercase text-[12px] space-x-2 md:opacity-50 hover:opacity-100 transition duration-300 ease-in-out'>
+                  <div className='text-sm inline-flex text-[12px] space-x-2 md:opacity-50 hover:opacity-100 transition duration-300 ease-in-out'>
                     Read the full story<ArrowRightIcon className="ml-2 mt-1 h-4 w-4" />
                   </div>
                 </ClientSideRoute>
