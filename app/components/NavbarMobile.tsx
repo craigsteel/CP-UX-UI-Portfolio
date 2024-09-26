@@ -80,7 +80,7 @@ export default function NavbarMobile () {
                 </li>
                 <li onClick={ handleSmallerScreensNavigation } className='py-10 font-bold text-2xl text-center hover:text-white cursor-pointer'>
                   <Link href="/projects/${slug}">
-                    Portfolio
+                    Projects
                   </Link>
                 </li>
                 <li onClick={ handleSmallerScreensNavigation } className='py-10 font-bold text-2xl text-center hover:text-white cursor-pointer'>

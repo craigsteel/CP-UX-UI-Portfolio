@@ -46,7 +46,7 @@ function Featured({posts}:Props) {
 
               <div className='projectButton hidden md:flex absolute bottom-[20px] py-2'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
-                  <p className='text-sm flex uppercase'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4" />
+                  <p className='text-sm flex lowercase'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4" />
                     </p>
                 </ClientSideRoute>
               </div>
@@ -83,7 +83,7 @@ function Featured({posts}:Props) {
 
               <div className='projectButton md:hidden'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
-              <p className='inline-flex text-base uppercase'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4"></ArrowUpRightIcon></p>
+              <p className='inline-flex text-base'>Read the full story<ArrowUpRightIcon className="ml-2 mt-1 h-4 w-4"></ArrowUpRightIcon></p>
                 </ClientSideRoute>
               </div>
 			      </div>

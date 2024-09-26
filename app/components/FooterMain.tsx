@@ -43,7 +43,7 @@ export default function Footer() {
           />
 
           <SocialIcon
-          url="https://twitter.com/home"
+          url="https://x.com/home"
           target="_blank"
           rel="noopener noreferrer"
           style={{ height: 40, width: 40 }}

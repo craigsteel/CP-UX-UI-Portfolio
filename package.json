@@ -21,7 +21,7 @@
     "@vercel/speed-insights": "^1.0.10",
     "gsap": "^3.12.5",
     "mux-embed": "^5.2.1",
-    "next": "^14.2.3",
+    "next": "^14.2.13",
     "next-sanity": "^9.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
