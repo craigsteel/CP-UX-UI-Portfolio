@@ -113,9 +113,9 @@ async function Project({ params: { slug } }: Props) {
 
           <div className='projectButton relative mt-10 ml-4 md:ml-20'>
             <ClientSideRoute key={post._id} route={`/projects/${post.slug.current}`}>
-            <div className='inline-flex uppercase text-lg space-x-2 md:opacity-80 hover:opacity-100 transition duration-300 ease-in-out'>
+            <div className='inline-flex text-lg space-x-2 md:opacity-80 hover:opacity-100 transition duration-300 ease-in-out'>
               <ArrowLeftIcon className="mr-2 mt-1 h-4 w-4" />
-              Back To All Projects
+              Back to all projects
             </div>
             </ClientSideRoute>
           </div>
