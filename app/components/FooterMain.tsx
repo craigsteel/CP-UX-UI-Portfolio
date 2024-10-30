@@ -7,7 +7,7 @@ import ScrollToTopButton from '../components/ScrollToTopButton'
 export default function Footer() {
   return (
 
-  <div className="footer flex bottom-0 mx-5 md:mx-20 flex-wrap mt-12">
+  <div className="footer flex bottom-0 mx-5 md:mx-10 lg:mx-20 flex-wrap mt-12">
     <div className=" relative md:w-2/3 p-3">
 
     <div className="text-base uppercase font-normal">

@@ -23,7 +23,7 @@ function Featured({posts}:Props) {
     <section className="mx-6 md:mx-0 ">
       {posts?.map((post) => (
         <div key={post._id}
-          className='relative flex flex-col md:flex-row mb-8 md:mb-0 md:my-10 md:my-14 md:mx-32 background-card'>
+          className='relative flex flex-col md:flex-row mb-8 md:mb-0 md:my-10 md:my-14 md:mx-10 lg:mx-32 background-card'>
 
           {post.categories?.map((category) => (
 
@@ -34,7 +34,7 @@ function Featured({posts}:Props) {
               <div className="text-sm font-normal pb-2">
                 {category.sector}
               </div>
-              <div className="text-sm font-extralight mb-4 line-clamp-3 md:line-clamp-4 lg:line-clamp-8 leading-6">
+              <div className="text-sm font-extralight mb-4 line-clamp-3 md:line-clamp-4 lg:line-clamp-7 leading-6">
                 {category.description}
               </div>
               <div className='md:text-sm uppercase'>
