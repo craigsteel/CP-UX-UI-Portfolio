@@ -2,7 +2,10 @@ import Hero from '../components/Hero'
 import Featured from '../components/Featured';
 import { groq } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
+import Cursor from '../components/CustomCursorTwo';
+import { Fragment } from 'react';
 
+export const revalidate = 60;
 
 const query = groq`
 *[_type == "post"] | order(number, desc)[0..6]{
@@ -14,18 +17,21 @@ const query = groq`
   "playbackId": video.asset->playbackId,
   }`;
 
-export default async function Page() {
+export default async function Page({}) {
 
   const posts = await client.fetch(query);
+
   return (
-    <>
+    <Fragment>
+      <Cursor />
       <div>
         <Hero
-          heading='Welcome, thank you for visiting my portfolio which focuses on UI/UX Design.'
-          message='I am a multidisciplinary UI/UX creative based in the UK. With a background of over 20 years in branding, corporate and web design, I bring a wealth of experience and knowledge to each project that can help clients to identify and solve their communication problems, creating a better and more enjoyable online user experience.'
-          subheading='Featured Projects' />
+          heading="Hi, thanks for visiting my portfolio that focuses on UX / UI Design."
+          message="I'm a UK-based UX / UI designer with 20+ years of experience in branding, corporate, and UX/UI. My design passion has fuelled a diverse career. I honed leadership, presentation, and client-facing skills, collaborating with developers and managing budgets to deliver successful projects on tight deadlines. I help clients solve communication challenges and craft exceptional online experiences that users love."
+          subheading="Featured Projects"
+          />
       </div>
-      <Featured posts={posts} />
-    </>
+        <Featured posts={posts} />
+    </Fragment>
   )
 }

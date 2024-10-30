@@ -1,4 +1,4 @@
-import { buildLegacyTheme } from "sanity";
+import {buildLegacyTheme, defineConfig} from "sanity";
 
 const props = {
     "--my-white": "#fff",

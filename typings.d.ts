@@ -13,23 +13,22 @@ interface Post extends Base {
   playbackId: string;
   title: string;
   categories: Category[];
-  videofrontend: string;
   backgroundImage: Image;
   mainImage: Image;
   mainImageProject: Image;
+  mainImageProjectMobile: Image;
   image: Image;
   public_id: string;
   resource_type: string;
   type: string;
-  videoinput: string;
   format: string;
   version: number;
   video: string;
   url: string;
-  youtube: PortableTextBlock[];
   mobileImage: Image;
   slug: Slug;
   body: PortableTextBlock[];
+  bodyMobile: PortableTextBlock[];
   content: PortableTextBlock[];
   description: PortableTextBlock[];
   overview?: PortableTextBlock[];
@@ -43,21 +42,22 @@ interface Author extends Base{
   slug: Slug;
 }
 
-interface videofrontend extends Base {
-  title: string;
-  playbackId: string;
-}
-
 interface Video {
   asset: Reference;
   url: string;
   public_id: string;
   _key: string;
+  playbackId: string;
 }
 
+// interface Reference {
+//   _ref: string;
+//   _type: "reference";
+// }
+
 interface Reference {
-  _ref: string;
-  _type: "reference";
+  _type: "slug";
+  current: string;
 }
 
 interface Slug {
@@ -70,7 +70,7 @@ interface Block {
   _type: "block";
   children: Span[];
   markDefs: any[];
-  style: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
+  styles: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
 }
 
 interface Span {
@@ -84,15 +84,11 @@ interface Category extends Base {
 	role: string;
 	number: number;
   description: string;
+  introduction: PortableTextBlock[];
   title: string;
   sector: string;
 }
 
-interface videoinput {
-  _type: "file";
-  asset: Reference;
-  url: string;
-}
 
 interface backgroundImage {
   _type: "image";
