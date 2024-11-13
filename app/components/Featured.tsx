@@ -27,20 +27,20 @@ function Featured({posts}:Props) {
 
           {post.categories?.map((category) => (
 
-            <div key={category._id} className='flex w-full md:w-1/3 flex-col md:pr-8'>
-              <h2 className='text-3xl pt-2 uppercase font-extralight'>
+            <div key={category._id} className='flex w-full md:w-1/3 lg:w-1/2 flex-col md:pr-8'>
+              <h2 className='text-3xl 2xl:text-4xl pt-2 uppercase font-extralight'>
                 {category.title}
               </h2>
-              <div className="text-sm font-normal pb-2">
+              <div className="text-sm 2xl:text-xl font-normal pb-2">
                 {category.sector}
               </div>
-              <div className="text-sm font-extralight mb-4 line-clamp-3 md:line-clamp-4 lg:line-clamp-7 leading-6">
+              <div className="text-sm 2xl:text-xl font-extralight mb-4 line-clamp-3 md:line-clamp-4 lg:line-clamp-7 leading-6 2xl:leading-9">
                 {category.description}
               </div>
-              <div className='md:text-sm uppercase'>
+              <div className='md:text-sm 2xl:text-xl uppercase'>
                 My Role
               </div>
-              <div className="text-sm font-light pb-4">
+              <div className="text-sm 2xl:text-xl font-light pb-4">
                 {category.role}
               </div>
 
@@ -65,7 +65,7 @@ function Featured({posts}:Props) {
 
             </div>
 
-          <div className='flex w-full md:w-[753px] md:h-[426px] drop-shadow-[0px_0px_10px_rgba(0,0,0,0.1)]'>
+          <div className='flex w-full md:w-[753px] 2xl:w-[1000px] md:h-[426px] 2xl:h-[540px] drop-shadow-[0px_0px_10px_rgba(0,0,0,0.1)]'>
                 <ClientSideRoute key={post._id} route={`/project/${post.slug.current}`}>
                     <StyledWrapper>
                       <MuxPlayer

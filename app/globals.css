@@ -82,7 +82,7 @@
   }
 
   h1 {
-    @apply text-[2.8rem] md:text-6xl;
+    @apply text-[2.8rem] md:text-6xl 2xl:text-8xl;
     @apply font-extrabold;
     @apply subpixel-antialiased;
   }
