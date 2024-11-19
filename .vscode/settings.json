@@ -1,14 +1,4 @@
 {
-<<<<<<< HEAD
-    "cSpell.words": [
-      "Asana",
-      "bgimage",
-      "clientbrief",
-      "craigsteel",
-      "datetime",
-      "extralight",
-      "GROQ",
-=======
   "css.customData": [
     ".vscode/tailwind.json"
   ],
@@ -32,19 +22,12 @@
       "Finalise",
       "GROQ",
       "hamb",
->>>>>>> main
       "heroicons",
       "INDESIGN",
       "mobileimage",
       "Parfitt",
       "Photoshop",
       "portabletext",
-<<<<<<< HEAD
-      "tailwindcss",
-      "Toxen",
-      "Uturn",
-      "videofrontend"
-=======
       "SVGIMG",
       "svgr",
       "svgs",
@@ -54,6 +37,11 @@
       "videofrontend",
       "wireframe",
       "wireframes"
->>>>>>> main
-    ]
+    ],
+    "githubPullRequests.ignoredPullRequestBranches": [
+      "master"
+    ],
+    "search.globalFindClipboard": true,
+    "search.quickAccess.preserveInput": true,
+    "search.quickOpen.includeSymbols": true
 }

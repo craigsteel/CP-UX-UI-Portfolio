@@ -22,10 +22,10 @@ export default function NavbarMobile () {
   return (
     <>
       <header className={navbar ? 'navbar active' : 'active'}>
-        <nav className='max-w-[1720px] max-auto h-[60px] md:h-[80px] flex justify-between items-center py-2 md:py-8 px-5 md:px-24'>
+        <nav className='z-10 max-auto h-[60px] md:h-[80px] flex justify-between items-center py-2 md:py-8 px-5 md:px-10 lg:px-24'>
           <div>
             <Link href='/' onClick={handleSmallerScreensNavigation}>
-              <span className='text-[16px] md:text-1xl md:opacity-70 ease-in-out duration-300 hover:opacity-100'>Craig Parfitt UI/UX Designer</span>
+              <span className='text-[16px] z-10 md:text-1xl md:opacity-70 ease-in-out duration-300 hover:opacity-100'>Craig Parfitt UX / UI Designer</span>
             </Link>
           </div>
 
@@ -42,37 +42,37 @@ export default function NavbarMobile () {
               </Link>
             </li>
             <li className='navLink md:text-1xl pr-6'>
-              <Link href="/projects/${slug}">
+              <Link href="/projects/${post.slug.current}">
                 Projects
               </Link>
             </li>
             <li className='navLink md:text-1xl'>
-              <Link href="mailto:craig@craigparfitt.com"
+              <a href="mailto:info@craigparfitt.com"
                 target="_blank"
                 rel="noopener noreferrer">
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
 
           {/* smaller screens */ }
-          <div onClick={ handleSmallerScreensNavigation } className='flex md:hidden'>
+          <div onClick={ handleSmallerScreensNavigation } className='flex md:hidden text-black'>
             { menuIcon ?
-              ( <AiOutlineClose size={ 25 } className='text-white' /> )
+              ( <AiOutlineClose size={25} /> )
               :
-              ( <AiOutlineMenu size={25} className='text-white' /> )
+              ( <AiOutlineMenu size={25}  /> )
           }
           </div>
 
           {/* Smaller screen Navbar */ }
           <div className={ menuIcon ?
-            'md:hidden absolute top-[40px] right-0 left-0 flex justify-center items-center w-full h-screen bg-slate-950 text-white ease-in-out duration-300'
+            'md:hidden z-50 absolute top-[60px] right-0 left-0 flex justify-center items-center w-full h-screen bg-slate-950 text-white ease-in-out duration-300'
             :
-            'md:hidden absolute top-[40px] right-0 left-[-100%] flex justify-center items-center w-full h-screen bg-slate-950 text-white text-center ease-in-out duration-300'
+            'md:hidden z-50 absolute top-[60px] right-0 left-[-100%] flex justify-center items-center w-full h-screen bg-slate-950 text-white text-center ease-in-out duration-300'
           }>
             <div className='w-full'>
 
-              <ul className='text-2xl'>
+              <ul className='text-2xl -mt-20'>
                 <li onClick={ handleSmallerScreensNavigation } className='py-10 font-bold text-2xl text-center hover:text-white cursor-pointer'>
                   <Link href='/'>
                     Home
@@ -80,7 +80,7 @@ export default function NavbarMobile () {
                 </li>
                 <li onClick={ handleSmallerScreensNavigation } className='py-10 font-bold text-2xl text-center hover:text-white cursor-pointer'>
                   <Link href="/projects/${slug}">
-                    Portfolio
+                    Projects
                   </Link>
                 </li>
                 <li onClick={ handleSmallerScreensNavigation } className='py-10 font-bold text-2xl text-center hover:text-white cursor-pointer'>
@@ -89,11 +89,11 @@ export default function NavbarMobile () {
                   </Link>
                 </li>
                 <li onClick={ handleSmallerScreensNavigation } className='py-10 font-bold text-2xl text-center  hover:text-white cursor-pointer'>
-                  <Link href="mailto:craig@craigparfitt.com"
+                  <a href="mailto:craig@craigparfitt.com"
                     target="_blank"
                     rel="noopener noreferrer">
                     Contact
-                  </Link>
+                  </a>
                 </li>
               </ul>
 
