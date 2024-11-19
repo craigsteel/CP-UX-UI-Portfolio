@@ -42,7 +42,7 @@ export default function NavbarMobile () {
               </Link>
             </li>
             <li className='navLink md:text-1xl pr-6'>
-              <Link href="/projects/${slug}">
+              <Link href="/projects/${post.slug.current}">
                 Projects
               </Link>
             </li>
@@ -56,11 +56,11 @@ export default function NavbarMobile () {
           </ul>
 
           {/* smaller screens */ }
-          <div onClick={ handleSmallerScreensNavigation } className='flex md:hidden'>
+          <div onClick={ handleSmallerScreensNavigation } className='flex md:hidden text-black'>
             { menuIcon ?
-              ( <AiOutlineClose size={ 25 } className='text-black' /> )
+              ( <AiOutlineClose size={25} /> )
               :
-              ( <AiOutlineMenu size={25} className='text-black' /> )
+              ( <AiOutlineMenu size={25}  /> )
           }
           </div>
 

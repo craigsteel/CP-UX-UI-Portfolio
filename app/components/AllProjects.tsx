@@ -42,6 +42,9 @@ function AllProjects({ posts }: Props) {
                 </ClientSideRoute>
               </div>
               <div className="pb-4 md:pb-12 pt-4">
+                <div className='md:text-sm 2xl:text-xl uppercase'>
+                  The Challenge
+                </div>
                 <div key={category._id} className='mb-5 text-base md:text-[14px] font-light leading-normal'>
                   {category.description}
                 </div>

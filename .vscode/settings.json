@@ -37,5 +37,11 @@
       "videofrontend",
       "wireframe",
       "wireframes"
-    ]
+    ],
+    "githubPullRequests.ignoredPullRequestBranches": [
+      "master"
+    ],
+    "search.globalFindClipboard": true,
+    "search.quickAccess.preserveInput": true,
+    "search.quickOpen.includeSymbols": true
 }

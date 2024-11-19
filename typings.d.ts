@@ -31,6 +31,7 @@ interface Post extends Base {
   bodyMobile: PortableTextBlock[];
   content: PortableTextBlock[];
   description: PortableTextBlock[];
+  biography: PortableTextBlock[];
   overview?: PortableTextBlock[];
   tags: string[];
 }
@@ -84,6 +85,7 @@ interface Category extends Base {
 	role: string;
 	number: number;
   description: string;
+  biography: StringSchemaType;
   introduction: PortableTextBlock[];
   title: string;
   sector: string;

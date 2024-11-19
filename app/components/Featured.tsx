@@ -6,6 +6,7 @@ import ClientSideRoute from './ClientSideRoute';
 import styled from 'styled-components';
 import MuxPlayer from '@mux/mux-player-react';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
+import { motion } from "framer-motion";
 type Props = {
 	posts: Post[];
 }
@@ -33,6 +34,9 @@ function Featured({posts}:Props) {
               </h2>
               <div className="text-sm 2xl:text-xl font-normal pb-2">
                 {category.sector}
+              </div>
+              <div className='md:text-sm 2xl:text-xl uppercase'>
+                The Challenge
               </div>
               <div className="text-sm 2xl:text-xl font-extralight mb-4 line-clamp-3 md:line-clamp-4 lg:line-clamp-7 leading-6 2xl:leading-9">
                 {category.description}

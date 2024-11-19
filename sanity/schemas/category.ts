@@ -25,5 +25,10 @@ export default defineType({
       title: "Description",
       type: "text",
     }),
+    defineField({
+      name: "biography",
+      title: "Biography",
+      type: "text",
+    }),
   ],
 });
