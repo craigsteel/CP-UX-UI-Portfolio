@@ -4,6 +4,7 @@ import { groq } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
 import Cursor from '../components/CustomCursorTwo';
 import { Fragment } from 'react';
+import Template from './template';
 
 export const revalidate = 60;
 
@@ -24,14 +25,16 @@ export default async function Page({}) {
   return (
     <Fragment>
       <Cursor />
-      <div>
-        <Hero
-          heading="Hi, thanks for visiting my portfolio that focuses on UX / UI Design."
-          message="I'm a UK-based UX / UI designer with 20+ years of experience in branding, corporate, and UX/UI. My design passion has fuelled a diverse career. I honed leadership, presentation, and client-facing skills, collaborating with developers and managing budgets to deliver successful projects on tight deadlines. I help clients solve communication challenges and craft exceptional online experiences that users love."
-          subheading="Featured Projects"
-          />
-      </div>
+      <Template>
+        <div>
+          <Hero
+            heading="Hi, thanks for visiting my portfolio that focuses on UX / UI Design."
+            message="I'm a UK-based UX / UI designer with 20+ years of experience in branding, corporate, and UX/UI. My design passion has fuelled a diverse career. I honed leadership, presentation, and client-facing skills, collaborating with developers and managing budgets to deliver successful projects on tight deadlines. I help clients solve communication challenges and craft exceptional online experiences that users love."
+            subheading="Featured Projects"
+            />
+        </div>
         <Featured posts={posts} />
+      </Template>
     </Fragment>
   )
 }

@@ -6,6 +6,7 @@ import ToolsUsed from "@/app/components/ToolsUsed";
 import Workflow from "@/app/components/WorkFlow";
 import { Metadata } from "next";
 import { Fragment } from "react";
+import Template from "../template";
 
 export const metadata: Metadata = {
   title: {
@@ -16,6 +17,7 @@ export default function About() {
   return (
     <Fragment >
       <Cursor />
+      <Template>
         <Hero
           heading='About Me'
           message="A deep-seated interest in design has propelled my career across advertising, branding, and UX / UI design. My journey commenced in the dynamic environment of advertising, where I cultivated a robust work ethic and honed my ability to deliver under tight deadlines while fostering collaborative relationships with high-caliber creative teams. This experience ignited a passion for brand development, motivating me to transition to a design consultancy.
@@ -29,6 +31,7 @@ export default function About() {
           <ToolsUsed />
           <Workflow />
         </main>
+      </Template>
     </Fragment>
   )
 }

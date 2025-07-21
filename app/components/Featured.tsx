@@ -6,7 +6,7 @@ import ClientSideRoute from './ClientSideRoute';
 import styled from 'styled-components';
 import MuxPlayer from '@mux/mux-player-react';
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
-import { motion } from "framer-motion";
+
 type Props = {
 	posts: Post[];
 }
@@ -18,7 +18,8 @@ const StyledWrapper = styled.div`
   background-color: #ffffff;
 `;
 
-function Featured({posts}:Props) {
+function Featured({ posts }: Props) {
+
   return (
 
     <section className="mx-6 md:mx-0 ">
@@ -93,7 +94,7 @@ function Featured({posts}:Props) {
 			      </div>
 		      ))}
 
-	    </section>
+      </section>
   )
 }
 

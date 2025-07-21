@@ -1,4 +1,3 @@
-'use client'
 import '../globals.css'
 import type { Metadata } from 'next'
 import FooterMain from '../components/FooterMain';
@@ -16,10 +15,10 @@ const open_sans = Open_Sans({
   variable: '--font-open-sans',
   display: 'swap',
 });
-// export const metadata: Metadata = {
-//   title: 'Craig Parfitt UI/UX Designer',
-//   description: 'Craig Parfitt UI/UX Portfolio',
-// }
+export const metadata: Metadata = {
+  title: 'Craig Parfitt UI/UX Designer',
+  description: 'Craig Parfitt UI/UX Portfolio',
+}
 export const viewport = {
   themeColor: 'bg-slate-950',
   viewport: {
@@ -41,28 +40,14 @@ export default function RootLayout({
     children: React.ReactNode;
   }) {
 
-  const pathName = usePathname()
-
   return (
     <Fragment>
       <html lang="en" className={`${open_sans.variable} font-sans !scroll-smooth subpixel-antialiased`}>
         <body>
-
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={pathName}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5}}
-            >
-              <DynamicNavbarMobile />
-                {children}
-                <SpeedInsights />
+          <DynamicNavbarMobile />
+            {children}
+              <SpeedInsights />
               <FooterMain />
-
-            </motion.div>
-          </AnimatePresence>
         </body>
       </html>
     </Fragment>

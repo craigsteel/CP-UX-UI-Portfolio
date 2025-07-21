@@ -42,7 +42,7 @@ export default function Journey() {
 
           <div className='pb-4'>
             <h4 className="text-base pt-0">ECHO WEB SOLUTIONS</h4>
-            <p className="font-medium text-base pb-2">SENIOR UX / UI DESIGNER - 2021-23</p>
+            <p className="font-medium text-base pb-2">SENIOR UX / UI DESIGNER - 2021-24</p>
             <div className="font-light text-base">
               <ul className="list-disc">
                 {echostart.map((echostart, index) =>

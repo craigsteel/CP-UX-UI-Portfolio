@@ -12,6 +12,7 @@ import ClientSideRoute from "@/app/components/ClientSideRoute";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { Metadata } from "next";
 import Cursor from "@/app/components/CustomCursorTwo";
+import Template from "../../template";
 
 export const metadata: Metadata = {
   title: {
@@ -56,6 +57,7 @@ async function Project({ params: { slug } }: Props) {
 	return (
     <>
       <Cursor />
+      <Template>
       <div className="">
 				{/* <Image
 					src={urlFor(post.backgroundImage).url()}
@@ -120,6 +122,7 @@ async function Project({ params: { slug } }: Props) {
             </ClientSideRoute>
           </div>
         </article>
+      </Template>
 		</>
 	)
 }

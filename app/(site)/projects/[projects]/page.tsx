@@ -5,6 +5,7 @@ import AllProjects from '@/app/components/AllProjects'
 import { Fragment } from 'react';
 import { Metadata } from 'next';
 import Cursor from '@/app/components/CustomCursorTwo';
+import Template from '../../template';
 
 export const metadata: Metadata = {
   title: {
@@ -27,16 +28,18 @@ export default async function Projects() {
 
   return (
     <Fragment>
-      <Cursor />
-        <Hero
-          heading='UX / UI Projects'
-          message='A selection of completed e-commerce, and business Website that generate business leads and increase conversions.'
-          subheading=''>
-        </Hero>
+      <Template>
+        <Cursor />
+          <Hero
+            heading='UX / UI Projects'
+            message='A selection of completed e-commerce, and business Website that generate business leads and increase conversions.'
+            subheading=''>
+          </Hero>
 
-        <section className='flex z-1 min-h-screen md:mx-20 md:p-10'>
-          <AllProjects posts={posts} />
-        </section>
+          <section className='flex z-1 min-h-screen md:mx-20 md:p-10'>
+            <AllProjects posts={posts} />
+          </section>
+      </Template>
       </Fragment>
     )
 
