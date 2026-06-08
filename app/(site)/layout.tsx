@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { Fragment } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from "framer-motion";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 // If loading a variable font, you don't need to specify the font weight
 const open_sans = Open_Sans({
@@ -43,12 +44,12 @@ export default function RootLayout({
   return (
     <Fragment>
       <html lang="en" className={`${open_sans.variable} font-sans !scroll-smooth subpixel-antialiased`}>
-        <body>
-          <DynamicNavbarMobile />
-            {children}
-              <SpeedInsights />
-              <FooterMain />
-        </body>
+				<GoogleTagManager gtmId="GTM-T8FCXVG9" /> <body>
+      <DynamicNavbarMobile />
+        {children}
+      <SpeedInsights />
+      <FooterMain />
+      </body>
       </html>
     </Fragment>
   )

@@ -5,9 +5,7 @@ import { client } from '@/sanity/lib/client';
 import Cursor from '../components/CustomCursorTwo';
 import { Fragment } from 'react';
 import Template from './template';
-
 export const revalidate = 60;
-
 const query = groq`
 *[_type == "post"] | order(number, desc)[0..6]{
   ...,
