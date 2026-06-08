@@ -1,5 +1,5 @@
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { DocumentIcon } from '@sanity/icons'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: "post",
@@ -66,6 +66,14 @@ export default defineType({
       },
     }),
     defineField({
+      name: "mainImageProjectMobile",
+      title: "Main image Project page Mobile",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: "mobileImage",
       title: "Mobile image",
       type: "image",
@@ -74,27 +82,10 @@ export default defineType({
       },
     }),
     defineField({
-      name: "author",
-      title: "Author",
-      type: "reference",
-        to: {
-          type: "author",
-        },
-    }),
-    defineField({
       name: "categories",
       title: "Categories",
       type: "array",
-        of: [
-          defineArrayMember({
-            type: "reference",
-            to: [
-              {
-                type: "category",
-              },
-            ],
-          }),
-        ],
+      of: [{ type: "reference", to: { type: "category" } }],
     }),
     defineField({
       name: "publishedAt",
@@ -104,6 +95,11 @@ export default defineType({
     defineField({
       name: "body",
       title: "Body",
+      type: "blockContent",
+    }),
+    defineField({
+      name: "bodyMobile",
+      title: "Body Mobile",
       type: "blockContent",
     }),
   ],
